@@ -13,10 +13,10 @@ export default function Accordion() {
         <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionSpades">
           <div className="accordion-body">
             <div>
-              <img className="rounded playing-card" src="src/assets/cards/joker_big.png" alt="Big Joker" />
-              <img className="rounded playing-card" src="src/assets/cards/joker_little.png" alt="Little Joker" />
-              <img className="rounded playing-card" src="src/assets/cards/diamond_02_deuce.png" alt="Deuce Diamond" />
-              <img className="rounded playing-card" src="src/assets/cards/spade_02_deuce.png" alt="Deuce Spade" />
+              <img className="rounded playing-card" src="/cards/joker_big.png" alt="Big Joker" />
+              <img className="rounded playing-card" src="/cards/joker_little.png" alt="Little Joker" />
+              <img className="rounded playing-card" src="/cards/diamond_02_deuce.png" alt="Deuce Diamond" />
+              <img className="rounded playing-card" src="/cards/spade_02_deuce.png" alt="Deuce Spade" />
             </div>
             The highest four cards in the deck are <strong>Big Joker</strong>, <strong>Little Joker</strong>,
             <strong>Deuce Diamond</strong>, <strong>Deuce Spade</strong>. These cards rank above the Ace Spade. The
@@ -34,10 +34,10 @@ export default function Accordion() {
         <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionSpades">
           <div className="accordion-body">
           <div>
-              <img className="rounded playing-card" src="src/assets/cards/joker_big.png" alt="Big Joker" />
-              <img className="rounded playing-card" src="src/assets/cards/joker_little.png" alt="Little Joker" />
-              <img className="rounded playing-card" src="src/assets/cards/spade_02_deuce.png" alt="Deuce Spade" />
-              <img className="rounded playing-card" src="src/assets/cards/spade_01_ace.png" alt="Ace Spade" />
+              <img className="rounded playing-card" src="/cards/joker_big.png" alt="Big Joker" />
+              <img className="rounded playing-card" src="/cards/joker_little.png" alt="Little Joker" />
+              <img className="rounded playing-card" src="/cards/spade_02_deuce.png" alt="Deuce Spade" />
+              <img className="rounded playing-card" src="/cards/spade_01_ace.png" alt="Ace Spade" />
             </div>
 
             The highest four cards in the deck are <strong>Big Joker</strong>, <strong>Little Joker</strong>,
@@ -56,10 +56,10 @@ export default function Accordion() {
         <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionSpades">
           <div className="accordion-body">
             <div>
-              <img className="rounded playing-card" src="src/assets/cards/joker_big.png" alt="Big Joker" />
-              <img className="rounded playing-card" src="src/assets/cards/joker_little.png" alt="Little Joker" />
-              <img className="rounded playing-card" src="src/assets/cards/spade_01_ace.png" alt="Ace Spade" />
-              <img className="rounded playing-card" src="src/assets/cards/spade_13_king.png" alt="King Spade" />
+              <img className="rounded playing-card" src="/cards/joker_big.png" alt="Big Joker" />
+              <img className="rounded playing-card" src="/cards/joker_little.png" alt="Little Joker" />
+              <img className="rounded playing-card" src="/cards/spade_01_ace.png" alt="Ace Spade" />
+              <img className="rounded playing-card" src="/cards/spade_13_king.png" alt="King Spade" />
             </div>
 
             The highest four cards in the deck are <strong>Big Joker</strong>, <strong>Little Joker</strong>,
@@ -78,10 +78,10 @@ export default function Accordion() {
         <div id="collapseFour" className="accordion-collapse collapse" data-bs-parent="#accordionSpades">
           <div className="accordion-body">
             <div>
-              <img className="rounded playing-card" src="src/assets/cards/spade_01_ace.png" alt="Ace Spade" />
-              <img className="rounded playing-card" src="src/assets/cards/spade_13_king.png" alt="King Spade" />
-              <img className="rounded playing-card" src="src/assets/cards/spade_12_queen.png" alt="Queen Spade" />
-              <img className="rounded playing-card" src="src/assets/cards/spade_11_jack.png" alt="Jack Spade" />
+              <img className="rounded playing-card" src="/cards/spade_01_ace.png" alt="Ace Spade" />
+              <img className="rounded playing-card" src="/cards/spade_13_king.png" alt="King Spade" />
+              <img className="rounded playing-card" src="/cards/spade_12_queen.png" alt="Queen Spade" />
+              <img className="rounded playing-card" src="/cards/spade_11_jack.png" alt="Jack Spade" />
             </div>
 
             The highest card in the deck is the Ace Spade. There are no jokers, and the deuces are not <i>wild</i> in
