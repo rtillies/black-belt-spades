@@ -1,0 +1,5 @@
+/* Background gradient for all pages */
+body {
+  background: linear-gradient(90deg, #ffff, #dddd 40%, #ccc3 100%);
+  background-size: 100%;
+}
