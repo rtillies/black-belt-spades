@@ -3,3 +3,11 @@
   border: 1px solid lightgray;
   height: 50%;
 }
+
+/* h5, p { */
+.carousel-caption {
+  background-color: black;
+  width: 40%;
+  opacity: 80%;
+  margin: auto;
+}
