@@ -2,7 +2,7 @@ import './carousel.css'
 
 export default function Carousel() {
   return (
-    <div id="carouselCaptions" className="carousel slide col-8">
+    <div id="carouselCaptions" className="carousel slide col-10">
       <div className="carousel-indicators">
         <button
           type="button"
@@ -27,21 +27,21 @@ export default function Carousel() {
       </div>
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src="images/black-aces.png" className="d-block w-50" alt="black aces" />
+          <img src="images/black-aces.png" className="d-block w-50 mx-auto" alt="black aces" />
           <div className="carousel-caption d-none d-md-block">
             <h5>Lessons</h5>
             <p>Sign up for lessons from a spades professional!</p>
           </div>
         </div>
         <div className="carousel-item">
-        <img src="images/jester-cap.png" className="d-block w-50" alt="jester cap" />
+        <img src="images/jester-cap.png" className="d-block w-50 mx-auto" alt="jester cap" />
           <div className="carousel-caption d-none d-md-block">
             <h5>Variations</h5>
             <p>Learn different variations of spades played around the country!</p>
           </div>
         </div>
         <div className="carousel-item">
-        <img src="images/WSOS-logo.png" className="d-block w-50" alt="WSOS logo" />
+        <img src="images/WSOS-logo.png" className="d-block w-50 mx-auto" alt="WSOS logo" />
           <div className="carousel-caption d-none d-md-block">
             <h5>Organizations</h5>
             <p>Visit the websites of spades organizations.</p>
