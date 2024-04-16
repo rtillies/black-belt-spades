@@ -11,7 +11,7 @@ export default function NavbarBrand() {
         width="30"
         height="24"
         className="d-inline-block align-text-top"
-      />{'   '}
+      />
       <a className="navbar-brand" href="#">
         Black Belt Spades
       </a>
