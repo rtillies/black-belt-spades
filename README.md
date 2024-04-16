@@ -1,4 +1,4 @@
-![Black Belt Spades](./client/public/images/Black-Belt-Spades.png)
+![Black Belt Spades](./client/public/images/Black-Belt-Spades.svg)
 
 # Per Scholas CP 325: Capstone Project
 
