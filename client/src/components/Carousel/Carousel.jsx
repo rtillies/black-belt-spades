@@ -1,8 +1,8 @@
-import React from "react";
+import './carousel.css'
 
 export default function Carousel() {
   return (
-    <div id="carouselCaptions" className="carousel slide">
+    <div id="carouselCaptions" className="carousel slide col-8">
       <div className="carousel-indicators">
         <button
           type="button"
