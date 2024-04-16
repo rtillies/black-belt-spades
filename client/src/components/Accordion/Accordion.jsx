@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Accordion() {
   return (
-    <div className="accordion col-md-8 col-sm-10" id="accordionSpades">
+    <div className="accordion col-md-10 col-lg-8" id="accordionSpades">
       <div className="accordion-item">
         <h2 className="accordion-header">
           <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
