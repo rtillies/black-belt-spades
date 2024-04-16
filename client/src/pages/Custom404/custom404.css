@@ -1,0 +1,21 @@
+.custom404 {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(41, 40, 40);
+
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.custom404 h1 {
+  font-size: 20em;
+  color: #fff2;
+  font-weight: 900;
+}
+
+.custom404 p {
+  margin: 20px 0 -50px 0;
+  color: #fff8;
+}
