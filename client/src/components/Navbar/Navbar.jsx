@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import NavbarBrand from '../NavbarBrand/NavbarBrand'
 import NavbarList from '../NavbarList/NavbarList';
+import './Navbar.css'
 
 export default function Navbar() {
   return (
