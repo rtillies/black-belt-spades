@@ -65,6 +65,15 @@ export default function NavbarList() {
             </ul>
           </li>
           <li className="nav-item">
+            <Link
+              className="nav-link"
+              to="https://github.com/rtillies/black-belt-spades"
+              target="_blank"
+            >
+              GitHub
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="nav-link" to="/login">
               Log In
             </Link>
