@@ -1,0 +1,6 @@
+.App {
+  font-family: 'Segoe UI', Helvetica, Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}

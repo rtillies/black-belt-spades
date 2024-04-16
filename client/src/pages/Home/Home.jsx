@@ -9,7 +9,9 @@ export default function Home() {
       {/* <PageHeader header="Black Belt Spades" /> */}
       {/* <Carousel /> */}
       {/* <img src='images/Black-Belt-Spades.svg' width='100%' /> */}
-      <Splash />
-      </>
+      <div className="Home page">
+        <Splash />
+      </div>
+    </>
   );
 }

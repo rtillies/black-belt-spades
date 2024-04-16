@@ -1,3 +1,11 @@
 #black-belt {
   margin: 0 5px;
+  width: 30px;
+  height: 24px;
+}
+
+.navbar {
+  /* background: linear-gradient(90deg, #ffff, #dddd 40%, #ccc3 100%); */
+  background: linear-gradient(90deg, #ffff, #ccc4 40%, #ccc3 100%);
+  /* background-color: #ccc3; */
 }
