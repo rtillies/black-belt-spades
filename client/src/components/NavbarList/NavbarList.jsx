@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Route, Router, Link } from 'react-router-dom'
 
 export default function NavbarList() {
   return (
@@ -16,9 +16,9 @@ export default function NavbarList() {
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">
+          <Link className="nav-link" to='/variations'>
             Variations
-          </a>
+          </Link>
         </li>
         <li className="nav-item dropdown">
           <a
