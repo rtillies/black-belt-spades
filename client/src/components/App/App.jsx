@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from '../Navbar/Navbar'
 import { Route, Router, Routes } from 'react-router-dom'
+import Home from '../../pages/Home/Home'
 import Variations from '../../pages/Variations/Variations'
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <Navbar />
 
         <Routes>
-          {/* <Route index element={<Home />} /> */}
+          <Route index element={<Home />} />
           <Route path='/variations' element={<Variations />} />
         </Routes>
       </div>
