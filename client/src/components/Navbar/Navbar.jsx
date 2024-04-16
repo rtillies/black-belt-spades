@@ -1,14 +1,16 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import NavbarBrand from '../NavbarBrand/NavbarBrand'
+import NavbarList from '../NavbarList/NavbarList';
 
 export default function Navbar() {
   return (
   <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top">
     <div className="container-fluid">
       <NavbarBrand />
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+      <NavbarList />
+      {/* <div className="collapse navbar-collapse" id="navbarSupportedContent"> */}
+        {/* <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
             <a className="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
@@ -41,9 +43,9 @@ export default function Navbar() {
           <li className="nav-item">
             <a className="nav-link" href="#"> Log In</a>
           </li>
-        </ul>
+        </ul> */}
       </div>
-    </div>
+    {/* </div> */}
   </nav>
   )
 }
