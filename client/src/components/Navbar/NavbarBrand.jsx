@@ -6,7 +6,7 @@ export default function NavbarBrand() {
     <>
       <img
         id="black-belt"
-        src="src/assets/images/black-belt.png"
+        src="images/black-belt.png"
         alt="Logo"
         width="30"
         height="24"
