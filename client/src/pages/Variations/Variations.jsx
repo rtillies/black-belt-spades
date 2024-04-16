@@ -1,15 +1,11 @@
-import React from "react";
-import "./variations.css";
 import Accordion from "../../components/Accordion/Accordion";
-// const cards = require.context('../assets/cards', true)
+import PageHeader from "../../components/PageHeader/PageHeader";
+import "./variations.css";
 
 export default function Variations() {
   return (
     <>
-      <div className="page-header p-4">
-        <h1>Variations</h1>
-      </div>
-
+      <PageHeader header="Variations" />
       <Accordion />
     </>
   );
