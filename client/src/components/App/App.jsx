@@ -5,8 +5,8 @@ import { Route, Router, Routes } from 'react-router-dom'
 import Home from '../../pages/Home/Home'
 import Variations from '../../pages/Variations/Variations'
 import Custom404 from '../../pages/Custom404/Custom404'
-import GamesPage from '../../pages/GamesPage/GamesPage'
-import TeamsPage from '../../pages/GamesPage/TeamsPage'
+import GamesPage from '../../pages/DataPage/GamesPage'
+import TeamsPage from '../../pages/DataPage/TeamsPage'
 
 function App() {
   const [count, setCount] = useState(0)
