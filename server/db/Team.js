@@ -13,6 +13,12 @@ const teamSchema = new mongoose.Schema({
     ref: "Conference",
     required: true,
   },
+  division: {
+    // type: mongoose.SchemaTypes.ObjectId,
+    type: mongoose.SchemaTypes.String,
+    ref: "Division",
+    required: true,
+  },
   captain: {
     type: String,
     required: true,
@@ -21,7 +27,10 @@ const teamSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  location: String,
+  location: {
+    type: String,
+    required: true,
+  },
   wins: {
     type: Number,
     min: 0,
