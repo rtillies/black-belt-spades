@@ -7,8 +7,7 @@ export default function Team(props) {
 
   return (
     <>
-      <tbody>
-        <tr>
+        <tr key={t.teamID}>
           {/* <th scope="row">{t.teamID}</th> */}
           {/* <td>{t.name}</td> */}
           <th scope="row">{t.name}</th>
@@ -16,7 +15,6 @@ export default function Team(props) {
           <td>{t.captain} & {t.partner}</td>
           <td>{t.wins}-{t.loss}</td>
         </tr>
-      </tbody>
     </>
   );
 }

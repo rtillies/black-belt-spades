@@ -10,17 +10,25 @@ export default function Teams(props) {
   return (
     <>
       <div className="Teams">
-        <div>Teams</div>
+        {/* <div>Teams</div> */}
         {/* {console.log("Teams", store.games)} */}
-        <table class="table table-striped table-hover table-bordered">
-          {store.teams &&
-            store.teams.map((team, index) => {
-              return <Team team={team}/>;
-            })}
+        <table className="table table-striped table-hover table-bordered">
+          <thead>
+            <tr>
+            <th scope='col'>Team Name</th>
+            <th scope='col'>Conf / Div</th>
+            <th scope='col'>Players</th>
+            <th scope='col'>Record</th>
+            </tr>
+          </thead>
+          <tbody>
+            {store.teams &&
+              store.teams.map((team, index) => {
+                return <Team team={team}/>;
+              })}
+          </tbody>
         </table>
       </div>
     </>
   )
-
-  
 }
