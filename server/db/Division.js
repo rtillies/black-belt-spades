@@ -11,7 +11,7 @@ const divisionSchema = new mongoose.Schema({
   },
   conference: {
     // type: mongoose.SchemaTypes.ObjectId,
-    type: mongoose.SchemaTypes.String,
+    type: String,
     ref: "Conference",
     required: true,
   },
@@ -48,6 +48,5 @@ divisionSchema.methods.updateDivision = function() {
 //   doc.updateConf()
 //   next()
 // }) 
-
 
 module.exports = mongoose.model("Division", divisionSchema);

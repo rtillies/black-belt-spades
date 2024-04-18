@@ -10,17 +10,18 @@ const teamSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
+    // unique: true,
     index: true,
   },
   conference: {
     // type: mongoose.SchemaTypes.ObjectId,
-    type: mongoose.SchemaTypes.String,
+    type: String,
     ref: "Conference",
     required: true,
   },
   division: {
     // type: mongoose.SchemaTypes.ObjectId,
-    type: mongoose.SchemaTypes.String,
+    type: String,
     ref: "Division",
     required: true,
   },

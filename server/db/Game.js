@@ -1,10 +1,18 @@
 const mongoose = require("mongoose");
 
 const gameSchema = new mongoose.Schema({
-  date: String,
+  gameID: {
+    type: Number,
+    required: true,
+    unique: true,
+  },
+  date: {
+    type: String,
+    required: true,
+  },
   homeTeam: {
     // type: mongoose.SchemaTypes.ObjectId,
-    type: mongoose.SchemaTypes.String,
+    type: String,
     ref: "Team",
     required: true,
     index: true,
@@ -26,9 +34,16 @@ const gameSchema = new mongoose.Schema({
   },
   winner: {
     // type: mongoose.SchemaTypes.ObjectId,
-    type: mongoose.SchemaTypes.String,
+    type: String,
     ref: "Team",
-    required: true,
+    // required: true,
+    index: true,
+  },
+  loser: {
+    // type: mongoose.SchemaTypes.ObjectId,
+    type: String,
+    ref: "Team",
+    // required: true,
     index: true,
   },
   createdAt: {
@@ -41,16 +56,6 @@ const gameSchema = new mongoose.Schema({
     default: () => Date.now(),
   },
 });
-
-// Teams can only play one game per day
-// so combination of date and winner is unique
-gameSchema.index(
-  {
-    date: 1,
-    winner: 1,
-  },
-  { unique: true }
-);
 
 gameSchema.statics.findByWinner = function (team) {
   return this.find(
@@ -73,6 +78,12 @@ gameSchema.query.byWinner = function (team) {
   );
 };
 
+gameSchema.query.byLoser = function (team) {
+  return this.where(
+    { loser: new RegExp(team, "i") },
+  );
+};
+
 gameSchema.query.byTeam = function (team) {
   return this.where({
     $or: [
@@ -90,5 +101,15 @@ gameSchema.pre("save", function (next) {
 gameSchema.methods.updateGame = function () {
   console.log(`Game ${this._id} updated.`);
 };
+
+// Teams can only play one game per day
+// so combination of date and winner is unique
+// gameSchema.index(
+//   {
+//     date: 1,
+//     winner: 1,
+//   },
+//   { unique: true }
+// );
 
 module.exports = mongoose.model("Game", gameSchema);

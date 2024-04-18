@@ -43,5 +43,4 @@ conferenceSchema.methods.updateConf = function() {
 //   next()
 // }) 
 
-
 module.exports = mongoose.model("Conference", conferenceSchema);
