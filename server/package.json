@@ -1,0 +1,25 @@
+{
+  "name": "sba-mongodb-app",
+  "version": "1.0.0",
+  "description": "SBA 319: MongoDB Database Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "express-async-handler": "^1.2.0",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.2.3",
+    "pug": "^3.0.2"
+  }
+}
