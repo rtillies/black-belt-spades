@@ -22,7 +22,7 @@ export default function Games(props) {
 
           {store.games &&
             store.games.map((game, index) => {
-              return <Game game={game}/>;
+              return <Game key={index} game={game}/>;
             })}
         </table>
       </div>

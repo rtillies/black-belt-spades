@@ -25,7 +25,7 @@ export default function Teams(props) {
           <tbody>
             {store.teams &&
               store.teams.map((team, index) => {
-                return <Team team={team}/>;
+                return <Team key={index} team={team}/>;
               })}
           </tbody>
         </table>
