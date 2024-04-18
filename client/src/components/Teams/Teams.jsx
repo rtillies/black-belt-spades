@@ -19,6 +19,7 @@ export default function Teams(props) {
             <th scope='col'>Conf / Div</th>
             <th scope='col'>Players</th>
             <th scope='col'>Record</th>
+            <th scope='col'>Percent</th>
             </tr>
           </thead>
           <tbody>

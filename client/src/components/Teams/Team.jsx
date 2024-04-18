@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 export default function Team(props) {
-  // console.log(props);
   const t = props.team;
-  // console.log('game', game);
+
+  const percent = (t.wins / (t.wins + t.loss)).toFixed(3)
 
   return (
     <>
@@ -14,6 +14,7 @@ export default function Team(props) {
           <td>{t.conference} / {t.division}</td>
           <td>{t.captain} & {t.partner}</td>
           <td>{t.wins}-{t.loss}</td>
+          <td>{percent}</td>
         </tr>
     </>
   );
