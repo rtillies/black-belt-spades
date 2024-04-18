@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './components/App/App'
 import { BrowserRouter } from "react-router-dom";
+import axios from 'axios';
 
 // Import our custom CSS and Bootstrap JS
 import './scss/styles.scss'
