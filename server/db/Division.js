@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const divisionSchema = new mongoose.Schema({
+  divID: {
+    type: String,
+    unique: true, // unique index
+  },
   name: {
     type: String,
     unique: true, // unique index
