@@ -4,7 +4,7 @@
   "description": "SBA 319: MongoDB Database Application",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
