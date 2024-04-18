@@ -6,7 +6,8 @@ const games = [
     "awayTeam": "JQ Suited",
     "homeScore": 545,
     "awayScore": 164,
-    // "winner": "VA Ballerz"
+    "winner": "VA Ballerz",
+    "loser": "JQ Suited"
   },
   {
     "gameID": 2,
@@ -15,7 +16,8 @@ const games = [
     "awayTeam": "That Couple",
     "homeScore": 308,
     "awayScore": 535,
-    // "winner": "That Couple"
+    "winner": "That Couple",
+    "loser": "Star Studded"
   },
   {
     "gameID": 3,
@@ -24,7 +26,8 @@ const games = [
     "awayTeam": "Team Bui",
     "homeScore": 255,
     "awayScore": 531,
-    // "winner": "Team Bui"
+    "winner": "Team Bui",
+    "loser": "Gerow Animals"
   },
   {
     "gameID": 4,
@@ -33,7 +36,8 @@ const games = [
     "awayTeam": "Knuck If You Stuck",
     "homeScore": 86,
     "awayScore": 505,
-    // "winner": "Knuck If You Stuck"
+    "winner": "Knuck If You Stuck",
+    "loser": "Jerzeys Finest"
   },
   {
     "gameID": 5,
@@ -42,7 +46,8 @@ const games = [
     "awayTeam": "Star Studded",
     "homeScore": 598,
     "awayScore": -38,
-    // "winner": "VA Ballerz"
+    "winner": "VA Ballerz",
+    "loser": "Star Studded"
   },
   {
     "gameID": 6,
@@ -51,7 +56,8 @@ const games = [
     "awayTeam": "That Couple",
     "homeScore": 278,
     "awayScore": 529,
-    // "winner": "That Couple"
+    "winner": "That Couple",
+    "loser": "JQ Suited"
   },
   {
     "gameID": 7,
@@ -60,7 +66,8 @@ const games = [
     "awayTeam": "Jerzeys Finest",
     "homeScore": 436,
     "awayScore": 527,
-    // "winner": "Jerzeys Finest"
+    "winner": "Jerzeys Finest",
+    "loser": "Gerow Animals"
   },
   {
     "gameID": 8,
@@ -69,7 +76,8 @@ const games = [
     "awayTeam": "Knuck If You Stuck",
     "homeScore": 549,
     "awayScore": 347,
-    // "winner": "Team Bui"
+    "winner": "Team Bui",
+    "loser": "Knuck If You Stuck"
   },
   {
     "gameID": 9,
@@ -78,7 +86,8 @@ const games = [
     "awayTeam": "That Couple",
     "homeScore": 507,
     "awayScore": 404,
-    // "winner": "VA Ballerz"
+    "winner": "VA Ballerz",
+    "loser": "That Couple"
   },
   {
     "gameID": 10,
@@ -87,7 +96,8 @@ const games = [
     "awayTeam": "Star Studded",
     "homeScore": 508,
     "awayScore": 115,
-    // "winner": "JQ Suited"
+    "winner": "JQ Suited",
+    "loser": "Star Studded"
   },
   {
     "gameID": 11,
@@ -96,7 +106,8 @@ const games = [
     "awayTeam": "Knuck If You Stuck",
     "homeScore": 299,
     "awayScore": 529,
-    // "winner": "Knuck If You Stuck"
+    "winner": "Knuck If You Stuck",
+    "loser": "Gerow Animals"
   },
   {
     "gameID": 12,
@@ -105,7 +116,8 @@ const games = [
     "awayTeam": "Jerzeys Finest",
     "homeScore": 286,
     "awayScore": 546,
-    // "winner": "Jerzeys Finest"
+    "winner": "Jerzeys Finest",
+    "loser": "Team Bui"
   },
   {
     "gameID": 13,
@@ -114,7 +126,8 @@ const games = [
     "awayTeam": "VA Ballerz",
     "homeScore": 334,
     "awayScore": 523,
-    // "winner": "VA Ballerz"
+    "winner": "VA Ballerz",
+    "loser": "JQ Suited"
   },
   {
     "gameID": 14,
@@ -123,7 +136,8 @@ const games = [
     "awayTeam": "Star Studded",
     "homeScore": 504,
     "awayScore": 167,
-    // "winner": "That Couple"
+    "winner": "That Couple",
+    "loser": "Star Studded"
   },
   {
     "gameID": 15,
@@ -132,7 +146,8 @@ const games = [
     "awayTeam": "Gerow Animals",
     "homeScore": 535,
     "awayScore": 82,
-    // "winner": "Team Bui"
+    "winner": "Team Bui",
+    "loser": "Gerow Animals"
   },
   {
     "gameID": 16,
@@ -141,7 +156,8 @@ const games = [
     "awayTeam": "Jerzeys Finest",
     "homeScore": 502,
     "awayScore": 399,
-    // "winner": "Knuck If You Stuck"
+    "winner": "Knuck If You Stuck",
+    "loser": "Jerzeys Finest"
   },
   {
     "gameID": 17,
@@ -150,7 +166,8 @@ const games = [
     "awayTeam": "VA Ballerz",
     "homeScore": 436,
     "awayScore": 553,
-    // "winner": "VA Ballerz"
+    "winner": "VA Ballerz",
+    "loser": "Star Studded"
   },
   {
     "gameID": 18,
@@ -159,7 +176,8 @@ const games = [
     "awayTeam": "JQ Suited",
     "homeScore": -151,
     "awayScore": 508,
-    // "winner": "JQ Suited"
+    "winner": "JQ Suited",
+    "loser": "That Couple"
   },
   {
     "gameID": 19,
@@ -168,7 +186,8 @@ const games = [
     "awayTeam": "Gerow Animals",
     "homeScore": 522,
     "awayScore": 479,
-    // "winner": "Jerzeys Finest"
+    "winner": "Jerzeys Finest",
+    "loser": "Gerow Animals"
   },
   {
     "gameID": 20,
@@ -177,7 +196,8 @@ const games = [
     "awayTeam": "Team Bui",
     "homeScore": 202,
     "awayScore": 519,
-    // "winner": "Team Bui"
+    "winner": "Team Bui",
+    "loser": "Knuck If You Stuck"
   },
   {
     "gameID": 21,
@@ -186,7 +206,8 @@ const games = [
     "awayTeam": "JQ Suited",
     "homeScore": 547,
     "awayScore": 298,
-    // "winner": "Star Studded"
+    "winner": "Star Studded",
+    "loser": "JQ Suited"
   },
   {
     "gameID": 22,
@@ -195,7 +216,8 @@ const games = [
     "awayTeam": "VA Ballerz",
     "homeScore": 320,
     "awayScore": 504,
-    // "winner": "VA Ballerz"
+    "winner": "VA Ballerz",
+    "loser": "That Couple"
   },
   {
     "gameID": 23,
@@ -204,7 +226,8 @@ const games = [
     "awayTeam": "Team Bui",
     "homeScore": 435,
     "awayScore": 508,
-    // "winner": "Team Bui"
+    "winner": "Team Bui",
+    "loser": "Jerzeys Finest"
   },
   {
     "gameID": 24,
@@ -213,7 +236,8 @@ const games = [
     "awayTeam": "Gerow Animals",
     "homeScore": 557,
     "awayScore": 304,
-    // "winner": "Knuck If You Stuck"
+    "winner": "Knuck If You Stuck",
+    "loser": "Gerow Animals"
   }
 ]
 
