@@ -1,11 +1,16 @@
 const mongoose = require("mongoose");
 
 const teamSchema = new mongoose.Schema({
-  name: {
+  teamID: {
     type: String,
     required: true,
     unique: true, // unique index
     // index: true,
+  },
+  name: {
+    type: String,
+    required: true,
+    index: true,
   },
   conference: {
     // type: mongoose.SchemaTypes.ObjectId,
