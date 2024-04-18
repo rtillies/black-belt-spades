@@ -11,14 +11,14 @@ export default function NavbarList() {
               Home
             </Link>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link className="nav-link" to="/lessons">
               Lessons
             </Link>
-          </li>
+          </li> */}
           <li className="nav-item">
             <Link className="nav-link" to="/variations">
-              Variations
+              Game Variations
             </Link>
           </li>
           <li className="nav-item">
@@ -28,7 +28,7 @@ export default function NavbarList() {
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/games">
-              All Games
+              Games
             </Link>
           </li>
           <li className="nav-item dropdown">
