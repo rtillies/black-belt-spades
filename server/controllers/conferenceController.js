@@ -7,9 +7,9 @@ const getConferences = asyncHandler(async (req, res) => {
 });
 
 const setConference = asyncHandler(async (req, res) => {
-  if (!req.body.name) {
+  if (!req.body.name || !req.body.description) {
     res.status(400);
-    throw new Error('Conference name is required');
+    throw new Error(`Conference  required information: Name, Description`);
   }
   const conf = await Conference.create({
     name: req.body.name,
