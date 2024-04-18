@@ -7,7 +7,6 @@ export default function Game(props) {
 
   return (
     <>
-      <tbody>
         <tr>
           <th scope="row">{g.gameID} / {g.date}</th>
           {/* <td>{g.date}</td> */}
@@ -16,7 +15,6 @@ export default function Game(props) {
           <td>{g.awayTeam} <br /> {g.awayScore}</td>
           {/* <td>{g.awayScore}</td> */}
         </tr>
-      </tbody>
     </>
   );
 }
