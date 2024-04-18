@@ -7,8 +7,8 @@ const teams = [
     "captain": "Professor",
     "partner": "Omar",
     "location": "Roanoke, VA",
-    // "wins": 6,
-    // "loss": 0
+    "wins": 6,
+    "loss": 0
   },
   {
     "teamID": "SP2",
@@ -18,8 +18,8 @@ const teams = [
     "captain": "Janet",
     "partner": "Quin",
     "location": "Raleigh, NC",
-    // "wins": 2,
-    // "loss": 4
+    "wins": 2,
+    "loss": 4
   },
   {
     "teamID": "SP3",
@@ -29,8 +29,8 @@ const teams = [
     "captain": "Reece",
     "partner": "Dee",
     "location": "Dallas, TX",
-    // "wins": 1,
-    // "loss": 5
+    "wins": 1,
+    "loss": 5
   },
   {
     "teamID": "SP4",
@@ -40,8 +40,8 @@ const teams = [
     "captain": "That Dude",
     "partner": "That Chick",
     "location": "St. Louis, MO",
-    // "wins": 3,
-    // "loss": 3
+    "wins": 3,
+    "loss": 3
   },
   {
     "teamID": "CM1",
@@ -51,8 +51,8 @@ const teams = [
     "captain": "Chad",
     "partner": "Junbug",
     "location": "Harlem, NY",
-    // "wins": 0,
-    // "loss": 6
+    "wins": 0,
+    "loss": 6
   },
   {
     "teamID": "CM2",
@@ -62,8 +62,8 @@ const teams = [
     "captain": "Daniel",
     "partner": "Tiffani",
     "location": "Washington, DC",
-    // "wins": 5,
-    // "loss": 1
+    "wins": 5,
+    "loss": 1
   },
   {
     "teamID": "CM3",
@@ -73,8 +73,8 @@ const teams = [
     "captain": "Marcus",
     "partner": "Sniper",
     "location": "Teaneck, NJ",
-    // "wins": 3,
-    // "loss": 3
+    "wins": 3,
+    "loss": 3
   },
   {
     "teamID": "CM4",
@@ -84,8 +84,8 @@ const teams = [
     "captain": "Aceito",
     "partner": "Borah",
     "location": "Hartford, CT",
-    // "wins": 4,
-    // "loss": 2
+    "wins": 4,
+    "loss": 2
   }
 ]
 
