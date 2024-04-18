@@ -7,8 +7,7 @@ const getGames = asyncHandler(async (req, res) => {
 });
 
 const setGame = asyncHandler(async (req, res) => {
-  if (!req.body.gameID || !req.body.date || !req.body.homeTeam || !req.body.awayTeam || 
-      !req.body.homeScore || !req.body.awayScore) {
+  if (!req.body.gameID || !req.body.date || !req.body.homeTeam || !req.body.awayTeam || !req.body.homeScore || !req.body.awayScore) {
     res.status(400);
     throw new Error(`Game required information: 
       Game ID, Date, Home Team, Away Team, Home Score, Away Score`);
@@ -23,6 +22,7 @@ const setGame = asyncHandler(async (req, res) => {
     : req.body.homeTeam 
 
   const game = await Game.create({
+    gameID: req.body.gameID,
     date: req.body.date,
     homeTeam: req.body.homeTeam,
     awayTeam: req.body.awayTeam,

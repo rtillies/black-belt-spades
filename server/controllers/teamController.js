@@ -7,14 +7,15 @@ const getTeams = asyncHandler(async (req, res) => {
 });
 
 const setTeam = asyncHandler(async (req, res) => {
-  if (!req.body.name || !req.body.conference || !req.body.captain || 
-      !req.body.partner || !req.body.location) {
+  if (!req.body.teamID || !req.body.name || !req.body.division || !req.body.conference || !req.body.captain || !req.body.partner || !req.body.location) {
     res.status(400);
     throw new Error(`Team required information: 
-      Name, Conference, Captain, Partner, Location`);
+      Team ID, Name, Division, Conference, Captain, Partner, Location`);
   }
   const team = await Team.create({
+    teamID: req.body.teamID,
     name: req.body.name,
+    division: req.body.division,
     conference: req.body.conference,
     captain: req.body.captain,
     partner: req.body.partner,
