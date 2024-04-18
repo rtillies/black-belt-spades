@@ -21,6 +21,16 @@ export default function NavbarList() {
               Variations
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/teams">
+              Teams
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/games">
+              All Games
+            </Link>
+          </li>
           <li className="nav-item dropdown">
             <a
               className="nav-link dropdown-toggle"
