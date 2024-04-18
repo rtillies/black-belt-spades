@@ -10,11 +10,13 @@ dotenv.config(); // environment variables (.env)
 
 // Import Schemas
 const Conference = require('./db/Conference');
+const Division = require('./db/Division');
 const Team = require('./db/Team');
 const Game = require('./db/Game');
 
 // Import data to populate database
 const conferences = require('./data/conferences');
+const divisions = require('./data/divisions');
 const teams = require('./data/teams');
 const games = require('./data/games');
 
@@ -25,6 +27,7 @@ app.use(errorHandler);
 
 // Routes
 app.use('/api/conferences', require('./routes/conferenceRoutes'))
+app.use('/api/divisions', require('./routes/divisionRoutes'))
 app.use('/api/teams', require('./routes/teamRoutes'))
 app.use('/api/games', require('./routes/gameRoutes'))
 
@@ -36,6 +39,7 @@ async function main() {
 
   // populate database
   populateDB(conferences, Conference)
+  populateDB(divisions, Division)
   populateDB(teams, Team)
   populateDB(games, Game)
 }
