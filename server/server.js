@@ -31,6 +31,9 @@ app.use(cors({
 }));
 
 // Routes
+app.get("/", (req, res) => {
+  res.json({ hello: "world" });
+});
 app.use('/api/conferences', require('./routes/conferenceRoutes'))
 app.use('/api/divisions', require('./routes/divisionRoutes'))
 app.use('/api/teams', require('./routes/teamRoutes'))
