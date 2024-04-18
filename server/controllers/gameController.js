@@ -13,11 +13,11 @@ const setGame = asyncHandler(async (req, res) => {
       Game ID, Date, Home Team, Away Team, Home Score, Away Score`);
   }
 
-  const winner = req.body.homeScore > req.body.awayScore 
+  const gameWinner = req.body.homeScore > req.body.awayScore 
     ? req.body.homeTeam 
     : req.body.awayTeam
 
-  const loser = req.body.homeScore > req.body.awayScore 
+  const gameLoser = req.body.homeScore > req.body.awayScore 
     ? req.body.awayTeam
     : req.body.homeTeam 
 
@@ -28,8 +28,8 @@ const setGame = asyncHandler(async (req, res) => {
     awayTeam: req.body.awayTeam,
     homeScore: req.body.homeScore,
     awayScore: req.body.awayScore,
-    winner: winner,
-    loser: loser,
+    winner: gameWinner,
+    loser: gameLoser,
   });
   res.status(200).json(game);
 });
