@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const games = require('../data/Games')
+const games = require('../data/games')
 
 const { 
   getGames, 
