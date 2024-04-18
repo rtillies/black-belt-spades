@@ -10,7 +10,16 @@ export default function Games(props) {
     <>
       <div className="Games">
         {/* {console.log("Games", store.games)} */}
-        <table class="table table-striped table-hover table-bordered">
+        <table className="table table-striped table-hover table-bordered">
+        <thead>
+            <tr>
+            <th scope='col'>Game ID / Date</th>
+            {/* <th scope='col'>Date</th> */}
+            <th scope='col'>Home</th>
+            <th scope='col'>Away</th>
+            </tr>
+          </thead>
+
           {store.games &&
             store.games.map((game, index) => {
               return <Game game={game}/>;

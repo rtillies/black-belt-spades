@@ -9,12 +9,12 @@ export default function Game(props) {
     <>
       <tbody>
         <tr>
-          <th scope="row">{g.gameID}</th>
-          <td>{g.date}</td>
-          <td>{g.homeTeam}</td>
-          <td>{g.homeScore}</td>
-          <td>{g.awayTeam}</td>
-          <td>{g.awayScore}</td>
+          <th scope="row">{g.gameID} / {g.date}</th>
+          {/* <td>{g.date}</td> */}
+          <td>{g.homeTeam} <br /> {g.homeScore}</td>
+          {/* <td>{g.homeScore}</td> */}
+          <td>{g.awayTeam} <br /> {g.awayScore}</td>
+          {/* <td>{g.awayScore}</td> */}
         </tr>
       </tbody>
     </>
