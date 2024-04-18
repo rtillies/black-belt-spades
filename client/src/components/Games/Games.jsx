@@ -9,7 +9,6 @@ export default function Games(props) {
   return (
     <>
       <div className="Games">
-        <div>Games</div>
         {/* {console.log("Games", store.games)} */}
         <table class="table table-striped table-hover table-bordered">
           {store.games &&
