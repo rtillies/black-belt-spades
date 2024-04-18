@@ -7,25 +7,13 @@ const spadesStore = create((set) => ({
   teams: null,
   games: null,
 
-  // getNotes: async () => {
-  //   // get notes
-  //   const res = await axios.get(PATH);
-  //   // console.log(res);
-
-  //   // set on state
-  //   set({
-  //     notes: res.data.notes
-  //   })
-  //   // setNotes(res.data.notes);
-  // },
-
-  getConferences: async () => {
+  getData: async (table) => {
     console.log("Hello");
-    const res = await axios.get(`/conferences`)
-    console.log("Response", res.data);
+    const res = await axios.get(`/${table}`)
+    console.log(`${table}`, res.data);
 
     set({
-      conferences: res.data,
+      [table]: res.data,
     })
   }
 
