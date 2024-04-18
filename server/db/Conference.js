@@ -5,7 +5,10 @@ const conferenceSchema = new mongoose.Schema({
     type: String,
     unique: true, // unique index
   },
-  description: String,
+  description: {
+    type: String,
+    required: true,
+  },
   createdAt: {
     type: Date,
     immutable: true,
