@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import spadesStore from '../../stores/spadesStore';
 import Games from '../../components/Games/Games'
+import Teams from '../../components/Teams/Teams';
 
 export default function GamesPage() {
   const store = spadesStore();
@@ -14,7 +15,8 @@ export default function GamesPage() {
 
   return (
     <>
-    <div>AllGames</div>
+    <div>All Games</div>
+    <Teams />
     <Games />
     </>
   )
