@@ -1,11 +1,11 @@
 const conferences = [
   {
     "name": "East",
-    "description": "States in the Eastern conference"
+    "description": "Teams in the Eastern conference"
   },
   {
     "name": "West",
-    "description": "States in the Pacific time zone"
+    "description": "Teams in the Western conference"
   },
 ]
 
