@@ -1,6 +1,6 @@
 const teams = [
   {
-    "teamID": 1,
+    "teamID": "SP1",
     "name": "VA Ballerz",
     "division": "State Property",
     "conference": "East",
@@ -11,7 +11,7 @@ const teams = [
     // "loss": 0
   },
   {
-    "teamID": 2,
+    "teamID": "SP2",
     "name": "JQ Suited",
     "division": "State Property",
     "conference": "East",
@@ -22,7 +22,7 @@ const teams = [
     // "loss": 4
   },
   {
-    "teamID": 3,
+    "teamID": "SP3",
     "name": "Star Studded",
     "division": "State Property",
     "conference": "East",
@@ -33,7 +33,7 @@ const teams = [
     // "loss": 5
   },
   {
-    "teamID": 4,
+    "teamID": "SP4",
     "name": "That Couple",
     "division": "State Property",
     "conference": "East",
@@ -44,7 +44,7 @@ const teams = [
     // "loss": 3
   },
   {
-    "teamID": 5,
+    "teamID": "CM1",
     "name": "Gerow Animals",
     "division": "Cash Money",
     "conference": "West",
@@ -55,7 +55,7 @@ const teams = [
     // "loss": 6
   },
   {
-    "teamID": 6,
+    "teamID": "CM2",
     "name": "Team Bui",
     "division": "Cash Money",
     "conference": "West",
@@ -66,7 +66,7 @@ const teams = [
     // "loss": 1
   },
   {
-    "teamID": 7,
+    "teamID": "CM3",
     "name": "Jerzeys Finest",
     "division": "Cash Money",
     "conference": "West",
@@ -77,7 +77,7 @@ const teams = [
     // "loss": 3
   },
   {
-    "teamID": 8,
+    "teamID": "CM4",
     "name": "Knuck If You Stuck",
     "division": "Cash Money",
     "conference": "West",
