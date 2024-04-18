@@ -13,16 +13,16 @@ const teamSchema = new mongoose.Schema({
     // unique: true,
     index: true,
   },
-  conference: {
-    // type: mongoose.SchemaTypes.ObjectId,
-    type: String,
-    ref: "Conference",
-    required: true,
-  },
   division: {
     // type: mongoose.SchemaTypes.ObjectId,
     type: String,
     ref: "Division",
+    required: true,
+  },
+  conference: {
+    // type: mongoose.SchemaTypes.ObjectId,
+    type: String,
+    ref: "Conference",
     required: true,
   },
   captain: {
