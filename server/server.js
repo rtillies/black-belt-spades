@@ -46,10 +46,10 @@ async function main() {
   connectDB();
 
   // populate database
-  populateDB(conferences, Conference)
-  populateDB(divisions, Division)
-  populateDB(teams, Team)
-  populateDB(games, Game)
+  // populateDB(conferences, Conference)
+  // populateDB(divisions, Division)
+  // populateDB(teams, Team)
+  // populateDB(games, Game)
 }
 
 async function addToDB(item, model) {
