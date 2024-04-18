@@ -7,7 +7,6 @@ const dotenv = require('dotenv')
 const cors = require('cors')
 const { errorHandler } = require('./middleware/errorHandler')
 const app = express();
-// import cors from 'cors';
 dotenv.config(); // environment variables (.env)
 
 // Import Schemas
@@ -26,7 +25,10 @@ const games = require('./data/games');
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 app.use(errorHandler);
-app.use(cors);
+app.use(cors({
+  origin: true,
+  credentials: true,
+}));
 
 // Routes
 app.use('/api/conferences', require('./routes/conferenceRoutes'))
