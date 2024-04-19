@@ -10,6 +10,7 @@ export default function TeamTable() {
       <table className="table table-striped table-hover table-bordered">
         <thead>
           <tr>
+            <th scope="col"></th>
             <th scope="col">Team Name</th>
             <th scope="col">Conf / Div</th>
             <th scope="col">Players</th>
