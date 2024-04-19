@@ -22,7 +22,7 @@ function App() {
           <Route path='/variations' element={<Variations />} />
           <Route path='/games' element={<GamesPage />} />
           <Route path='/teams' element={<TeamsPage />} />
-          <Route path='/showteam' element={<SingleTeam />} />
+          <Route path='/show' element={<SingleTeam />} />
           <Route path='*' element={<Custom404 />} />
         </Routes>
       </div>
