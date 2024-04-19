@@ -60,8 +60,24 @@ teamSchema.statics.findByName = function(name) {
   return this.findOne({name: new RegExp(name, 'i')})
 }
 
+teamSchema.statics.findByConference = function(conference) {
+  return this.find({conference: new RegExp(conference, 'i')})
+}
+
+teamSchema.statics.findByDivision = function(division) {
+  return this.find({division: new RegExp(division, 'i')})
+}
+
 teamSchema.query.byName = function(name) {
   return this.where({name: new RegExp(name, 'i')})
+}
+
+teamSchema.query.byConference = function(conference) {
+  return this.where({conference: new RegExp(conference, 'i')})
+}
+
+teamSchema.query.byDivision = function(division) {
+  return this.where({division: new RegExp(division, 'i')})
 }
 
 teamSchema.pre('save', function(next) {
