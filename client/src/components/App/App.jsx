@@ -7,6 +7,7 @@ import Variations from '../../pages/Variations/Variations'
 import Custom404 from '../../pages/Custom404/Custom404'
 import GamesPage from '../../pages/DataPage/GamesPage'
 import TeamsPage from '../../pages/DataPage/TeamsPage'
+import SingleTeam from '../Teams/SingleTeam'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,7 @@ function App() {
           <Route path='/variations' element={<Variations />} />
           <Route path='/games' element={<GamesPage />} />
           <Route path='/teams' element={<TeamsPage />} />
+          <Route path='/showteam' element={<SingleTeam />} />
           <Route path='*' element={<Custom404 />} />
         </Routes>
       </div>
