@@ -10,9 +10,11 @@ export default function GameTable() {
       <table className="table table-striped table-hover table-bordered">
         <thead>
           <tr>
-            <th scope="col">Game ID / Date</th>
-            <th scope="col">Home</th>
-            <th scope="col">Away</th>
+            <th scope="col">Game ID</th>
+            <th scope="col">Date</th>
+            <th scope="col">Home Team</th>
+            <th scope="col">Away Team</th>
+            <th scope="col">Final Score</th>
           </tr>
         </thead>
         <tbody>
