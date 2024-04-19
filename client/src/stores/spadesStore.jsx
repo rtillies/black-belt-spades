@@ -6,6 +6,8 @@ const spadesStore = create((set) => ({
   divisions: null,
   teams: null,
   games: null,
+  team: null,
+  teamGames: null,
 
   getData: async (table) => {
     // console.log("Hello");
@@ -16,10 +18,31 @@ const spadesStore = create((set) => ({
       set({
         [table]: res.data,
       })
+
     } catch (error) {
       console.log(error);
     }
-  }
+  },
+
+  getTeam: () => {
+    const teams = teams.getState();
+    set({
+      team: teams[0]
+    })
+  },
+
+  handleTeamClick: async (t) => {
+    console.log('arg team', t);
+    axios.get(`games/${t.name}`)
+    .then((res)=> {
+      console.log('store games data', res.data);
+
+      set({
+        team: t,
+        teamGames: res.data,
+      })
+    })
+  },
 
 }))
 
