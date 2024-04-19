@@ -5,6 +5,7 @@ const games = require('../data/games')
 const { 
   getGames, 
   setGame, 
+  getGamesByTeam, 
   getGamesByWinner, 
   // updateGame, 
   // deleteGame 
@@ -15,6 +16,7 @@ router.route('/')
   .post(setGame)
 
 router.route('/:team')
+  .get(getGamesByTeam)
   .get(getGamesByWinner)
   // .patch(updateGame)
   // .delete(deleteGame)
