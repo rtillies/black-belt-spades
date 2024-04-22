@@ -32,27 +32,25 @@ export default function SingleTeam() {
     <>
       <PageHeader header={store.team.name} />
       {/* {<button>hello</button>} */}
-      <table className="table table-striped table-hover table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">Game ID</th>
-            <th scope="col">Date</th>
-            <th scope="col">Home Team</th>
-            <th scope="col">Away Team</th>
-            <th scope="col">Final Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          {store.teamGames &&
-            store.teamGames.map((game, index) => {
-              return <Game key={index} game={game} />;
-            })}
-          {/* {store.games &&
-            store.games.map((game, index) => {
-              return <Game key={index} game={game} />;
-            })} */}
-        </tbody>
-      </table>
+      <div className="table-display">
+        <table className="table table-striped table-hover table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Game ID</th>
+              <th scope="col">Date</th>
+              <th scope="col">Home Team</th>
+              <th scope="col">Away Team</th>
+              <th scope="col">Final Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            {store.teamGames &&
+              store.teamGames.map((game, index) => {
+                return <Game key={index} game={game} />;
+              })}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 }

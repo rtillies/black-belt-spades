@@ -7,6 +7,7 @@ export default function GameTable() {
 
   return (
     <>
+        <div className="table-display">
       <table className="table table-striped table-hover table-bordered">
         <thead>
           <tr>
@@ -24,6 +25,7 @@ export default function GameTable() {
             })}
         </tbody>
       </table>
+      </div>
     </>
   );
 }

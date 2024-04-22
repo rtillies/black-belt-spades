@@ -10,22 +10,15 @@ export default function Team(props) {
   const [teamGames, setTeamGames] = useState()
   const [team, setTeam] = useState()
   const t = props.team;
-  // const percent = (t.wins / (t.wins + t.loss)).toFixed(3);
   const store = spadesStore();
 
   return (
     <>
       <tr key={t.teamID}>
-        <td>
-          {/* <button className="btn btn-sm" onClick={() => handleClick(t)}>
-            view
-          </button> */}
-        </td>
         <th scope="row">
           <Link className='teamLink' to='/show' onClick={() => store.handleTeamClick(t)}>
           {t.name}
           </Link>
-          {/* {t.name} */}
         </th>
         <td>
           {t.conference} / {t.division}
