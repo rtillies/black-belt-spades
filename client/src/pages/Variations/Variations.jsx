@@ -5,7 +5,7 @@ import "./variations.css";
 export default function Variations() {
   return (
     <>
-      <PageHeader header="Variations" />
+      <PageHeader header="Variations" buttonList='none' />
       <Accordion />
     </>
   );
