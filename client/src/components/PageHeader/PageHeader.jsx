@@ -2,11 +2,12 @@ import HeaderButton from "./HeaderButton";
 import spadesStore from "../../stores/spadesStore";
 import { useState } from "react";
 
-export default function PageHeader({ header }) {
+export default function PageHeader({ header, buttonList }) {
   const store = spadesStore();
-  const [buttons, setButtons] = useState(store.pages[header.toLowerCase()])
+  const [buttons, setButtons] = useState(store.pages[buttonList])
+  // const [buttons, setButtons] = useState()
 
-  console.log(header.toLowerCase());
+  // console.log(header.toLowerCase());
   // setButtons(store.pages[header.toLowerCase()])
   // const buttons = store.pages[header.toLowerCase()]
   

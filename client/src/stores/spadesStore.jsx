@@ -45,6 +45,7 @@ const spadesStore = create((set) => ({
   pages: {
     teams: ['Add Team'],
     games: ['Add Game'],
+    single: ['All Teams']
   },
 
   getTeams: async () => {

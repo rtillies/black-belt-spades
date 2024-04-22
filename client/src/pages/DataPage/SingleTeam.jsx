@@ -30,8 +30,7 @@ export default function SingleTeam() {
 
   return (
     <>
-      <PageHeader header={store.team.name} />
-      {/* {<button>hello</button>} */}
+      <PageHeader header={store.team.name} buttonList={'single'} />
       <div className="table-display">
         <table className="table table-striped table-hover table-bordered">
           <thead>

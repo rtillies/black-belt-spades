@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./teams.css";
 import axios from "axios";
-import SingleTeam from "./SingleTeam";
+import SingleTeam from "../../pages/DataPage/SingleTeam";
 import GamesPage from "../../pages/DataPage/GamesPage";
 import spadesStore from "../../stores/spadesStore";
 
