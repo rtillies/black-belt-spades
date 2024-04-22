@@ -17,7 +17,8 @@ export default function GamesPage() {
 
   return (
     <>
-      <PageHeader header="Games" />
+      {/* <PageHeader header="Games" /> */}
+      <PageHeader header="Games" buttonList='games' />
       <Games />
     </>
   )
