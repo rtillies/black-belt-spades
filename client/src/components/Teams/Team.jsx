@@ -10,7 +10,7 @@ export default function Team(props) {
   const [teamGames, setTeamGames] = useState()
   const [team, setTeam] = useState()
   const t = props.team;
-  const percent = (t.wins / (t.wins + t.loss)).toFixed(3);
+  // const percent = (t.wins / (t.wins + t.loss)).toFixed(3);
   const store = spadesStore();
 
   return (
@@ -36,7 +36,8 @@ export default function Team(props) {
         <td>
           {t.wins}-{t.loss}
         </td>
-        <td>{percent}</td>
+        {/* <td>{percent}</td> */}
+        <td>{t.percent}</td>
       </tr>
     </>
   );

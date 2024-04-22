@@ -1,25 +1,25 @@
 import {create} from 'zustand'
 import axios from "axios";
 
-// const sortTeamsByName = (arr) => {
-//   const sorted = arr.toSorted(
-//     (a,b) => {
-//       const aName = a.name.toLowerCase()
-//       const bName = b.name.toLowerCase()
-//       return a.name - b.name
-//     }
-//   )
-//   return sorted
-// }
+const sortTeamsByName = (arr) => {
+  const sorted = arr.toSorted(
+    (a,b) => {
+      const aName = a.name.toLowerCase()
+      const bName = b.name.toLowerCase()
+      return aName < bName ? -1 : 1
+    }
+  )
+  return sorted
+}
 
-// const sortGames = () => {
-//   const sorted = games.toSorted(
-//     (a,b) => {
-//       a.gameID - b.gameID
-//     }
-//   )
-//   return sorted
-// }
+const sortGames = () => {
+  const sorted = games.toSorted(
+    (a,b) => {
+      a.gameID - b.gameID
+    }
+  )
+  return sorted
+}
 
 const spadesStore = create((set) => ({
   conferences: null,
@@ -44,19 +44,33 @@ const spadesStore = create((set) => ({
   getTeams: async () => {
     try {
       const res = await axios.get(`/teams`)
-      console.log(`all teams`, res.data);
+      // console.log(`all teams`, res.data);
       
-      res.data.sort((a,b) => {
-        const aName = a.name.toLowerCase()
-        const bName = b.name.toLowerCase()
-        return aName < bName ? -1 : 1
+      const newTeams = res.data.map((t) => {
+        console.log(t);
+        const games = t.wins + t.loss
+        const percent = games > 0 ? (t.wins / games).toFixed(3) : 0;
+        
+        return {...t, percent}
       })
+      
+      // const sortedTeams = sortTeamsByName(res.data)
+      const sortedTeams = sortTeamsByName(newTeams)
+      
+      console.log(`sorted teams`, sortedTeams);
+      // res.data.sort((a,b) => {
+      //   const aName = a.name.toLowerCase()
+      //   const bName = b.name.toLowerCase()
+      //   return aName < bName ? -1 : 1
+      // })
       
       // console.log(`sorted teams`, res.data);
 
       set({
-        teams: res.data,
-        team: res.data[0],
+        teams: sortedTeams,
+        team: sortedTeams[0],
+        // teams: res.data,
+        // team: res.data[0],
       })
     } catch (error) {
       console.log(error);
