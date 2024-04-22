@@ -4,13 +4,15 @@ import spadesStore from '../../stores/spadesStore';
 import Teams from '../../components/Teams/Teams';
 import PageHeader from '../../components/PageHeader/PageHeader';
 
-export default function GamesPage() {
+export default function TeamsPage() {
   const store = spadesStore();
 
   useEffect(() => {
     // store.getData('conferences');
     // store.getData('divisions');
-    store.getData('teams');
+    // store.getData('teams');
+    store.getTeams();
+    // store.sortTeamsByName();
     // store.getData('games');
   }, []);
 

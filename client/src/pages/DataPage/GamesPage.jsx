@@ -11,7 +11,8 @@ export default function GamesPage() {
     // store.getData('conferences');
     // store.getData('divisions');
     // store.getData('teams');
-    store.getData('games');
+    // store.getData('games');
+    store.getGames();
   }, []);
 
   return (

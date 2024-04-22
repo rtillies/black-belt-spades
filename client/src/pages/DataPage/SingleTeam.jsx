@@ -10,7 +10,7 @@ export default function SingleTeam() {
 
   useEffect(() => {
     // if (store.team === null) {
-    if (team === null) {
+    if (store.team === null) {
       console.log("Team is null");
       setTeam(store.getTeam());
       console.log("after getTeam", team);
@@ -30,7 +30,8 @@ export default function SingleTeam() {
 
   return (
     <>
-      <PageHeader header={team.name} />
+      <PageHeader header={store.team.name} />
+      {/* {<button>hello</button>} */}
       <table className="table table-striped table-hover table-bordered">
         <thead>
           <tr>
