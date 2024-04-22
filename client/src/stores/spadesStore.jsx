@@ -1,12 +1,25 @@
 import {create} from 'zustand'
 import axios from "axios";
 
+// sort alphabetically by team name
 const sortTeamsByName = (arr) => {
   const sorted = arr.toSorted(
     (a,b) => {
       const aName = a.name.toLowerCase()
       const bName = b.name.toLowerCase()
       return aName < bName ? -1 : 1
+    }
+  )
+  return sorted
+}
+
+// sort descending order by record
+const sortTeamsByRecord = (arr) => {
+  const sorted = arr.toSorted(
+    (a,b) => {
+      const aRecord = Number(a.percent)
+      const bRecord = Number(b.percent)
+      return bRecord - aRecord
     }
   )
   return sorted
@@ -55,7 +68,8 @@ const spadesStore = create((set) => ({
       })
       
       // const sortedTeams = sortTeamsByName(res.data)
-      const sortedTeams = sortTeamsByName(newTeams)
+      // const sortedTeams = sortTeamsByName(newTeams)
+      const sortedTeams = sortTeamsByRecord(newTeams)
       
       console.log(`sorted teams`, sortedTeams);
       // res.data.sort((a,b) => {
