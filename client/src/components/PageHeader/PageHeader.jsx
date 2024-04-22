@@ -16,7 +16,7 @@ export default function PageHeader({ header, buttonList }) {
       <h1>{header}</h1>
       {console.log('button list', buttons)}
       {buttons.map((b, i) => {
-        return <HeaderButton text={b} />
+        return <HeaderButton key={i} text={b} />
       })}
     </div>
   );
