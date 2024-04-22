@@ -39,10 +39,96 @@ export default function AddTeam() {
               </div>
             </div>
           </div>
+          <div className="row">
+            <div className="col">
+              <div className="form-floating mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  name="division"
+                  placeholder=""
+                  value={store.addTeamForm.division}
+                  onChange={store.updateAddTeamFormField}
+                />
+                <label htmlFor="name">Division</label>
+              </div>
+            </div>
+            <div className="col">
+              <div className="form-floating mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  name="conference"
+                  placeholder=""
+                  value={store.addTeamForm.conference}
+                  onChange={store.updateAddTeamFormField}
+                />
+                <label htmlFor="name">Conference</label>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+          <div className="col">
+              <div className="form-floating mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  name="captain"
+                  placeholder=""
+                  value={store.addTeamForm.captain}
+                  onChange={store.updateAddTeamFormField}
+                />
+                <label htmlFor="name">Captain (Player 1)</label>
+              </div>
+            </div>
+            <div className="col">
+              <div className="form-floating mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  name="partner"
+                  placeholder=""
+                  value={store.addTeamForm.partner}
+                  onChange={store.updateAddTeamFormField}
+                />
+                <label htmlFor="name">Partner (Player 2)</label>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+          <div className="col">
+              <div className="form-floating mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  name="email"
+                  placeholder=""
+                  value={store.addTeamForm.email}
+                  onChange={store.updateAddTeamFormField}
+                />
+                <label htmlFor="name">Captain Email Address</label>
+              </div>
+            </div>
+            <div className="col">
+              <div className="form-floating mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  name="phone"
+                  placeholder=""
+                  value={store.addTeamForm.phone}
+                  onChange={store.updateAddTeamFormField}
+                />
+                <label htmlFor="name">Captain Phone Number</label>
+              </div>
+            </div>
+          </div>
           <button className="btn btn-outline-primary mx-2" type="submit">
             Add Team
           </button>
-          <button className="btn btn-outline-primary mx-2" type="reset">
+          <button 
+            onClick={store.resetAddTeamForm}
+            className="btn btn-outline-primary mx-2" type="reset">
             Reset
           </button>
         </form>

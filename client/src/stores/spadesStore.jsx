@@ -39,11 +39,13 @@ const spadesStore = create((set) => ({
 
   addTeamForm: {
     name: "",
+    location: "",
     division: "",
     conference: "",
     captain: "",
     partner: "",
-    location: "",
+    email: "",
+    phone: "",
   },
 
   updateAddTeamFormField: (e) => {
@@ -59,20 +61,21 @@ const spadesStore = create((set) => ({
     });
   },
 
-  // resetAddTeamForm: (e) => {
-  //   // const { name, value } = e.target;
+  resetAddTeamForm: (e) => {
+    console.log('Reset form');
+    // const { name, value } = e.target;
 
-  //   set({
-  //     createForm: {
-  //       name: "",
-  //       division: "",
-  //       conference: "",
-  //       captain: "",
-  //       partner: "",
-  //       location: "",
-  //     },
-  //   });
-  // },
+    set({
+      addTeamForm: {
+        name: "",
+        division: "",
+        // conference: "",
+        // captain: "",
+        // partner: "",
+        location: "",
+      },
+    });
+  },
 
   addTeam: async (e) => {
     e.preventDefault();
@@ -87,13 +90,15 @@ const spadesStore = create((set) => ({
     // clear form
     set({
       teams: [...teams, res.data.team],
-      createForm: {
+      addTeamForm: {
         name: "",
+        location: "",
         division: "",
         conference: "",
         captain: "",
         partner: "",
-        location: "",
+        email: "",
+        phone: "",
       },
     });
   },
