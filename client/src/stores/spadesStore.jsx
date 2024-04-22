@@ -116,7 +116,7 @@ const spadesStore = create((set) => ({
       const res = await axios.get(`/teams`);
 
       const newTeams = res.data.map((t) => {
-        console.log(t);
+        // console.log(t);
         const games = t.wins + t.loss;
         const percent = games > 0 ? (t.wins / games).toFixed(3) : 0;
 
