@@ -29,6 +29,7 @@ const sortGames = (arr) => {
   return sorted;
 };
 
+
 const spadesStore = create((set) => ({
   conferences: null,
   divisions: null,
@@ -188,6 +189,8 @@ const spadesStore = create((set) => ({
       });
     });
   },
+
+
 }));
 
 export default spadesStore;

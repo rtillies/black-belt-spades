@@ -18,6 +18,7 @@ export default function AddTeam() {
                   type="text"
                   className="form-control"
                   name="name"
+                  id="name"
                   placeholder=""
                   value={store.addTeamForm.name}
                   onChange={store.updateAddTeamFormField}
@@ -31,11 +32,12 @@ export default function AddTeam() {
                   type="text"
                   className="form-control"
                   name="location"
+                  id="location"
                   placeholder=""
                   value={store.addTeamForm.location}
                   onChange={store.updateAddTeamFormField}
                 />
-                <label htmlFor="name">Location</label>
+                <label htmlFor="location">Location</label>
               </div>
             </div>
           </div>
@@ -46,11 +48,12 @@ export default function AddTeam() {
                   type="text"
                   className="form-control"
                   name="division"
+                  id="division"
                   placeholder=""
                   value={store.addTeamForm.division}
                   onChange={store.updateAddTeamFormField}
                 />
-                <label htmlFor="name">Division</label>
+                <label htmlFor="division">Division</label>
               </div>
             </div>
             <div className="col">
@@ -59,11 +62,12 @@ export default function AddTeam() {
                   type="text"
                   className="form-control"
                   name="conference"
+                  id="conference"
                   placeholder=""
                   value={store.addTeamForm.conference}
                   onChange={store.updateAddTeamFormField}
                 />
-                <label htmlFor="name">Conference</label>
+                <label htmlFor="conference">Conference</label>
               </div>
             </div>
           </div>
@@ -74,11 +78,12 @@ export default function AddTeam() {
                   type="text"
                   className="form-control"
                   name="captain"
+                  id="captain"
                   placeholder=""
                   value={store.addTeamForm.captain}
                   onChange={store.updateAddTeamFormField}
                 />
-                <label htmlFor="name">Captain (Player 1)</label>
+                <label htmlFor="captain">Captain (Player 1)</label>
               </div>
             </div>
             <div className="col">
@@ -87,11 +92,12 @@ export default function AddTeam() {
                   type="text"
                   className="form-control"
                   name="partner"
+                  id="partner"
                   placeholder=""
                   value={store.addTeamForm.partner}
                   onChange={store.updateAddTeamFormField}
                 />
-                <label htmlFor="name">Partner (Player 2)</label>
+                <label htmlFor="partner">Partner (Player 2)</label>
               </div>
             </div>
           </div>
@@ -99,27 +105,29 @@ export default function AddTeam() {
           <div className="col">
               <div className="form-floating mb-3">
                 <input
-                  type="text"
+                  type="email"
                   className="form-control"
                   name="email"
+                  id="email"
                   placeholder=""
                   value={store.addTeamForm.email}
                   onChange={store.updateAddTeamFormField}
                 />
-                <label htmlFor="name">Captain Email Address</label>
+                <label htmlFor="email">Captain Email Address</label>
               </div>
             </div>
             <div className="col">
               <div className="form-floating mb-3">
                 <input
-                  type="text"
+                  type="phone"
                   className="form-control"
                   name="phone"
+                  id="phone"
                   placeholder=""
                   value={store.addTeamForm.phone}
                   onChange={store.updateAddTeamFormField}
                 />
-                <label htmlFor="name">Captain Phone Number</label>
+                <label htmlFor="phone">Captain Phone Number</label>
               </div>
             </div>
           </div>
