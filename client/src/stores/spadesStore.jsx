@@ -42,6 +42,11 @@ const spadesStore = create((set) => ({
   team: null,
   teamGames: null,
 
+  pages: {
+    teams: ['Add Team'],
+    games: ['Add Game'],
+  },
+
   getTeams: async () => {
     try {
       const res = await axios.get(`/teams`)
