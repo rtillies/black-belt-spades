@@ -7,7 +7,7 @@ import Variations from '../../pages/Variations/Variations'
 import Custom404 from '../../pages/Custom404/Custom404'
 import GamesPage from '../../pages/DataPage/GamesPage'
 import TeamsPage from '../../pages/DataPage/TeamsPage'
-import SingleTeam from '../Teams/SingleTeam'
+import SingleTeam from '../../pages/DataPage/SingleTeam'
 
 function App() {
   const [count, setCount] = useState(0)
