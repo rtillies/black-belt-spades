@@ -25,8 +25,8 @@ const sortTeamsByRecord = (arr) => {
   return sorted
 }
 
-const sortGames = () => {
-  const sorted = games.toSorted(
+const sortGames = (arr) => {
+  const sorted = arr.toSorted(
     (a,b) => {
       a.gameID - b.gameID
     }
@@ -42,22 +42,9 @@ const spadesStore = create((set) => ({
   team: null,
   teamGames: null,
 
-  // sortTeamsByName: (arr) => {
-  //   const sortedArray = arr.toSorted(
-  //     (a,b) => {
-  //       a.name - b.name
-  //     }
-  //   )
-
-  //   set({
-  //     teams: sortedArray,
-  //   })
-  // },
-
   getTeams: async () => {
     try {
       const res = await axios.get(`/teams`)
-      // console.log(`all teams`, res.data);
       
       const newTeams = res.data.map((t) => {
         console.log(t);
@@ -67,18 +54,8 @@ const spadesStore = create((set) => ({
         return {...t, percent}
       })
       
-      // const sortedTeams = sortTeamsByName(res.data)
-      // const sortedTeams = sortTeamsByName(newTeams)
       const sortedTeams = sortTeamsByRecord(newTeams)
-      
       console.log(`sorted teams`, sortedTeams);
-      // res.data.sort((a,b) => {
-      //   const aName = a.name.toLowerCase()
-      //   const bName = b.name.toLowerCase()
-      //   return aName < bName ? -1 : 1
-      // })
-      
-      // console.log(`sorted teams`, res.data);
 
       set({
         teams: sortedTeams,
@@ -94,16 +71,12 @@ const spadesStore = create((set) => ({
   getGames: async () => {
     try {
       const res = await axios.get(`/games`)
-      console.log(`all games`, res.data);
-
-      res.data.sort((a,b) => {
-        return a.gameID - b.gameID
-      })
       
-      // console.log(`sorted games`, res.data);
+      const sortedGames = sortGames(res.data)
+      console.log(`sorted games`, sortedGames);
   
       set({
-        games: res.data,
+        games: sortedGames,
       })
     } catch (error) {
       console.log(error);
