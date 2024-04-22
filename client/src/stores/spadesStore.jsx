@@ -28,7 +28,7 @@ const sortTeamsByRecord = (arr) => {
 const sortGames = (arr) => {
   const sorted = arr.toSorted(
     (a,b) => {
-      a.gameID - b.gameID
+      return a.gameID - b.gameID
     }
   )
   return sorted
