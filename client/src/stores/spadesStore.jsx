@@ -1,38 +1,33 @@
-import {create} from 'zustand'
+import { create } from "zustand";
 import axios from "axios";
+// import AddTeam from '../pages/AddPage/AddTeam';
 
 // sort alphabetically by team name
 const sortTeamsByName = (arr) => {
-  const sorted = arr.toSorted(
-    (a,b) => {
-      const aName = a.name.toLowerCase()
-      const bName = b.name.toLowerCase()
-      return aName < bName ? -1 : 1
-    }
-  )
-  return sorted
-}
+  const sorted = arr.toSorted((a, b) => {
+    const aName = a.name.toLowerCase();
+    const bName = b.name.toLowerCase();
+    return aName < bName ? -1 : 1;
+  });
+  return sorted;
+};
 
 // sort descending order by record
 const sortTeamsByRecord = (arr) => {
-  const sorted = arr.toSorted(
-    (a,b) => {
-      const aRecord = Number(a.percent)
-      const bRecord = Number(b.percent)
-      return bRecord - aRecord
-    }
-  )
-  return sorted
-}
+  const sorted = arr.toSorted((a, b) => {
+    const aRecord = Number(a.percent);
+    const bRecord = Number(b.percent);
+    return bRecord - aRecord;
+  });
+  return sorted;
+};
 
 const sortGames = (arr) => {
-  const sorted = arr.toSorted(
-    (a,b) => {
-      return a.gameID - b.gameID
-    }
-  )
-  return sorted
-}
+  const sorted = arr.toSorted((a, b) => {
+    return a.gameID - b.gameID;
+  });
+  return sorted;
+};
 
 const spadesStore = create((set) => ({
   conferences: null,
@@ -42,25 +37,88 @@ const spadesStore = create((set) => ({
   team: null,
   teamGames: null,
 
+  addTeamForm: {
+    name: "",
+    division: "",
+    conference: "",
+    captain: "",
+    partner: "",
+    location: "",
+  },
+
+  updateAddTeamFormField: (e) => {
+    const { name, value } = e.target;
+
+    set((state) => {
+      return {
+        addTeamForm: {
+          ...state.addTeamForm,
+          [name]: value,
+        },
+      };
+    });
+  },
+
+  // resetAddTeamForm: (e) => {
+  //   // const { name, value } = e.target;
+
+  //   set({
+  //     createForm: {
+  //       name: "",
+  //       division: "",
+  //       conference: "",
+  //       captain: "",
+  //       partner: "",
+  //       location: "",
+  //     },
+  //   });
+  // },
+
+  addTeam: async (e) => {
+    e.preventDefault();
+
+    const { addTeamForm, teams } = spadesStore.getState();
+
+    // create team
+    const res = await axios.post("/teams", addTeamForm);
+    console.log(res);
+
+    // update state
+    // clear form
+    set({
+      teams: [...teams, res.data.team],
+      createForm: {
+        name: "",
+        division: "",
+        conference: "",
+        captain: "",
+        partner: "",
+        location: "",
+      },
+    });
+  },
+
   pages: {
-    teams: ['Add Team'],
-    games: ['Add Game'],
-    single: ['All Teams'],
+    teams: ["Add Team"],
+    games: ["Add Game"],
+    single: ["All Teams"],
+    add: ["Cancel"],
+    none: [],
   },
 
   getTeams: async () => {
     try {
-      const res = await axios.get(`/teams`)
-      
+      const res = await axios.get(`/teams`);
+
       const newTeams = res.data.map((t) => {
         console.log(t);
-        const games = t.wins + t.loss
+        const games = t.wins + t.loss;
         const percent = games > 0 ? (t.wins / games).toFixed(3) : 0;
-        
-        return {...t, percent}
-      })
-      
-      const sortedTeams = sortTeamsByRecord(newTeams)
+
+        return { ...t, percent };
+      });
+
+      const sortedTeams = sortTeamsByRecord(newTeams);
       console.log(`sorted teams`, sortedTeams);
 
       set({
@@ -68,7 +126,7 @@ const spadesStore = create((set) => ({
         team: sortedTeams[0],
         // teams: res.data,
         // team: res.data[0],
-      })
+      });
     } catch (error) {
       console.log(error);
     }
@@ -76,14 +134,14 @@ const spadesStore = create((set) => ({
 
   getGames: async () => {
     try {
-      const res = await axios.get(`/games`)
-      
-      const sortedGames = sortGames(res.data)
+      const res = await axios.get(`/games`);
+
+      const sortedGames = sortGames(res.data);
       console.log(`sorted games`, sortedGames);
-  
+
       set({
         games: sortedGames,
-      })
+      });
     } catch (error) {
       console.log(error);
     }
@@ -92,13 +150,12 @@ const spadesStore = create((set) => ({
   getData: async (table) => {
     // console.log("Hello");
     try {
-      const res = await axios.get(`/${table}`)
+      const res = await axios.get(`/${table}`);
       console.log(`${table}`, res.data);
-  
+
       set({
         [table]: res.data,
-      })
-
+      });
     } catch (error) {
       console.log(error);
     }
@@ -107,27 +164,25 @@ const spadesStore = create((set) => ({
   getTeam: () => {
     const teams = teams.getState();
     set({
-      team: teams[0]
-    })
+      team: teams[0],
+    });
   },
 
   handleTeamClick: async (t) => {
-    console.log('arg team', t);
-    axios.get(`games/${t.name}`)
-    .then((res)=> {
-      console.log('store games data', res.data);
+    console.log("arg team", t);
+    axios.get(`games/${t.name}`).then((res) => {
+      console.log("store games data", res.data);
 
-      res.data.sort((a,b) => {
-        return a.gameID - b.gameID
-      })
+      res.data.sort((a, b) => {
+        return a.gameID - b.gameID;
+      });
 
       set({
         team: t,
         teamGames: res.data,
-      })
-    })
+      });
+    });
   },
-
-}))
+}));
 
 export default spadesStore;
