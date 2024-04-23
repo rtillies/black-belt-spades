@@ -17,6 +17,9 @@ export default function HeaderButton({text, color}) {
       case 'Add Team':
         navigate('/add-team')
         break;
+      case 'Update Team':
+        navigate('/update-team')
+        break;
       case 'Add Game':
         navigate('/add-game')
         break;
