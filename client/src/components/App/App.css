@@ -17,10 +17,14 @@
 
 .page-header, .admin-panel {
   display: flex;
-  width: 60%;
+}
+
+.page-header {
+  width: 100%;
 }
 
 .admin-panel {
+  width: 60%;
   margin-bottom: 2%;
 }
 
