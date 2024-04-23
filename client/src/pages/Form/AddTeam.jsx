@@ -13,7 +13,7 @@ export default function AddTeam() {
 
   
   // const divisions = store.divisions;
-  console.log(store.divisions);
+  // console.log(store.divisions);
   if (store.addTeamForm._id) return <></>;
 
   return (
@@ -54,11 +54,16 @@ export default function AddTeam() {
           <div className="row">
             <div className="col">
               <div className="form-floating mb-3">
-                <select className="form-select" aria-label="Division Select">
+                <select 
+                  className="form-select" aria-label="Division Select"
+                  name='division'
+                  onChange={store.updateAddTeamFormField}
+                  >
                   <option defaultValue>Division</option>
                   {store.divisions.map((div, i) => {
                     return <option key={i} value={div.name}>{div.name}</option>
                   })}
+                  <option value='Bad Boy'>Bad Boy</option>
                 </select>
                 {/* <input
                   type="text"
@@ -75,7 +80,11 @@ export default function AddTeam() {
 
             <div className="col">
             <div className="form-floating mb-3">
-                <select className="form-select" aria-label="Conference Select">
+                <select 
+                  className="form-select" aria-label="Conference Select"
+                  name='conference'
+                  onChange={store.updateAddTeamFormField}
+                >
                   <option defaultValue>Conference</option>
                   {store.conferences.map((conf, i) => {
                     return <option key={i} value={conf.name}>{conf.name}</option>

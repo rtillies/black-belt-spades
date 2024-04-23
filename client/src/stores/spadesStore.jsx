@@ -49,6 +49,7 @@ const spadesStore = create((set) => ({
 
   updateAddTeamFormField: (e) => {
     const { name, value } = e.target;
+    console.log(e.target, e.target.value);
 
     set((state) => {
       return {
@@ -83,6 +84,7 @@ const spadesStore = create((set) => ({
     const { addTeamForm, teams } = spadesStore.getState();
 
     // create team
+    console.log(addTeamForm);
     const res = await axios.post("/teams", addTeamForm);
     console.log(res);
 
