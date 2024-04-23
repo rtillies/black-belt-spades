@@ -1,6 +1,5 @@
 import { create } from "zustand";
 import axios from "axios";
-// import AddTeam from '../pages/AddPage/AddTeam';
 
 // sort alphabetically by team name
 const sortTeamsByName = (arr) => {
@@ -28,7 +27,6 @@ const sortGames = (arr) => {
   });
   return sorted;
 };
-
 
 const spadesStore = create((set) => ({
   conferences: null,
@@ -64,16 +62,17 @@ const spadesStore = create((set) => ({
 
   resetAddTeamForm: (e) => {
     console.log('Reset form');
-    // const { name, value } = e.target;
 
     set({
       addTeamForm: {
         name: "",
-        division: "",
-        // conference: "",
-        // captain: "",
-        // partner: "",
         location: "",
+        division: "",
+        conference: "",
+        captain: "",
+        partner: "",
+        email: "",
+        phone: "",
       },
     });
   },
