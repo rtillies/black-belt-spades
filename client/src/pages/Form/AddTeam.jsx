@@ -1,16 +1,28 @@
 import React, { useEffect } from "react";
 import spadesStore from "../../stores/spadesStore";
 import PageHeader from "../../components/PageHeader/PageHeader";
+import { useNavigate } from "react-router-dom";
 
 export default function AddTeam() {
   const store = spadesStore();
+  const navigate = useNavigate();
 
-  useEffect(() => {
+  const handleSubmit = async (e) => {
+    console.log('Submit team event', e.target);
+    e.preventDefault();
+    console.log('Pass prevent default');
+
+    await store.addTeam();
+
+    // Navigate to team page
+    // navigate('/teams')
+  }
+
+  // useEffect(() => {
     // store.getData('divisions');
     // console.log('Get divisions');
     // store.getData('conferences');
-  }, []);
-
+  // }, []);
   
   // const divisions = store.divisions;
   // console.log(store.divisions);
@@ -20,7 +32,62 @@ export default function AddTeam() {
     <>
       <PageHeader header="Add New Team" buttonList="none" />
       <div className="add-team form-display">
-        <form onSubmit={store.addTeam}>
+      <form onSubmit={handleSubmit}>
+        <div className="row">
+            <div className="col">
+              {/* <div className="form-floating mb-3"> */}
+              <div className="mb-3">
+                <select 
+                  className="form-select" aria-label="Division Select"
+                  name='division'
+                  onChange={store.updateAddTeamFormField}
+                  >
+                  <option defaultValue>Division</option>
+                  {store.divisions.map((div, i) => {
+                    return <option key={i} value={div.name}>{div.name}</option>
+                  })}
+                </select>
+                {/* <input
+                  type="text"
+                  className="form-control"
+                  name="division"
+                  id="division"
+                  placeholder=""
+                  value={store.addTeamForm.division}
+                  onChange={store.updateAddTeamFormField}
+                />
+                <label htmlFor="division">Division</label> */}
+              </div>
+            </div>
+            <div className="col">
+              {/* <div className="form-floating mb-3"> */}
+              <div className="mb-3">
+                <select 
+                  className="form-select" aria-label="Conference Select"
+                  name='conference'
+                  onChange={store.updateAddTeamFormField}
+                >
+                  <option defaultValue>Conference</option>
+                  {store.conferences.map((conf, i) => {
+                    return <option key={i} value={conf.name}>{conf.name}</option>
+                  })}
+                </select>
+                </div>
+              {/* <div className="form-floating mb-3">
+                <input
+                  disabled
+                  type="text"
+                  className="form-control"
+                  name="conference"
+                  id="conference"
+                  placeholder=""
+                  value={store.addTeamForm.conference}
+                  onChange={store.updateAddTeamFormField}
+                />
+                <label htmlFor="conference">Conference</label>
+              </div> */}
+            </div>
+          </div>
           <div className="row">
             <div className="col">
               <div className="form-floating mb-3">
@@ -49,62 +116,6 @@ export default function AddTeam() {
                 />
                 <label htmlFor="location">Location</label>
               </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">
-              <div className="form-floating mb-3">
-                <select 
-                  className="form-select" aria-label="Division Select"
-                  name='division'
-                  onChange={store.updateAddTeamFormField}
-                  >
-                  <option defaultValue>Division</option>
-                  {store.divisions.map((div, i) => {
-                    return <option key={i} value={div.name}>{div.name}</option>
-                  })}
-                  <option value='Bad Boy'>Bad Boy</option>
-                </select>
-                {/* <input
-                  type="text"
-                  className="form-control"
-                  name="division"
-                  id="division"
-                  placeholder=""
-                  value={store.addTeamForm.division}
-                  onChange={store.updateAddTeamFormField}
-                />
-                <label htmlFor="division">Division</label> */}
-              </div>
-            </div>
-
-            <div className="col">
-            <div className="form-floating mb-3">
-                <select 
-                  className="form-select" aria-label="Conference Select"
-                  name='conference'
-                  onChange={store.updateAddTeamFormField}
-                >
-                  <option defaultValue>Conference</option>
-                  {store.conferences.map((conf, i) => {
-                    return <option key={i} value={conf.name}>{conf.name}</option>
-                  })}
-                </select>
-                </div>
-
-              {/* <div className="form-floating mb-3">
-                <input
-                  disabled
-                  type="text"
-                  className="form-control"
-                  name="conference"
-                  id="conference"
-                  placeholder=""
-                  value={store.addTeamForm.conference}
-                  onChange={store.updateAddTeamFormField}
-                />
-                <label htmlFor="conference">Conference</label>
-              </div> */}
             </div>
           </div>
           <div className="row">
@@ -167,7 +178,10 @@ export default function AddTeam() {
               </div>
             </div>
           </div>
-          <button className="btn btn-outline-primary mx-2" type="submit">
+          <button 
+            className="btn btn-outline-primary mx-2" 
+            type="submit"
+          >
             Add Team
           </button>
           <button

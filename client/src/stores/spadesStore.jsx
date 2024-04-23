@@ -79,14 +79,14 @@ const spadesStore = create((set) => ({
   },
 
   addTeam: async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     const { addTeamForm, teams } = spadesStore.getState();
 
     // create team
     console.log(addTeamForm);
     const res = await axios.post("/teams", addTeamForm);
-    console.log(res);
+    console.log('response', res);
 
     // update state
     // clear form
@@ -120,7 +120,7 @@ const spadesStore = create((set) => ({
       const newTeams = res.data.map((t) => {
         // console.log(t);
         const games = t.wins + t.loss;
-        const percent = games > 0 ? (t.wins / games).toFixed(3) : 0;
+        const percent = games > 0 ? (t.wins / games).toFixed(3) : (0/1).toFixed(3);
 
         return { ...t, percent };
       });
