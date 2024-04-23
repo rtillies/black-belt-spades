@@ -9,10 +9,13 @@ export default function UpdateTeam() {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
+    console.log('team', store.team);
+
     console.log("Submit team event", e.target);
     e.preventDefault();
     console.log("Pass prevent default");
-    setMessage(`Team Updated: ${store.updateTeamForm.name}`)
+    store.updateTeam()
+    setMessage(`Team Updated: ${store.team.name}`)
     store.resetUpdateTeamForm()
 
     // Navigate to team page
@@ -24,6 +27,8 @@ export default function UpdateTeam() {
     // console.log('Get divisions');
     // store.getData('conferences');
       // message.current = "Submitted"
+      console.log('team', store.team);
+
     // });
     }, []);
 
@@ -33,65 +38,27 @@ export default function UpdateTeam() {
 
   return (
     <>
-      <PageHeader header="Update New Team" buttonList="update" />
+      <PageHeader header="Update Team" buttonList="add" />
       <div className="update-team form-display">
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col">
-              {/* <div className="form-floating mb-3"> */}
-              <div className="mb-3">
-                {/* <label htmlFor="division">Division</label> */}
-                <select
-                  // required
-                  className="form-select"
-                  aria-label="Division Select"
-                  name="division"
-                  onChange={store.updateUpdateTeamFormField}
-                >
-                  {/* <option defaultValue>Select Division</option> */}
-                  <option value='' defaultValue>Select Division</option>
-                  {store.divisions.map((div, i) => {
-                    return (
-                      <option key={i} value={div.name}>
-                        {div.name}
-                      </option>
-                    );
-                  })}
-                </select>
-                {/* <input
+              <div className="form-floating mb-3">
+                <input
+                  disabled
                   type="text"
                   className="form-control"
                   name="division"
                   id="division"
                   placeholder=""
-                  value={store.updateTeamForm.division}
+                  value={store.team.division}
                   onChange={store.updateUpdateTeamFormField}
                 />
-                <label htmlFor="division">Division</label> */}
+                <label htmlFor="division">Division</label>
               </div>
             </div>
             <div className="col">
-              {/* <div className="form-floating mb-3"> */}
-              <div className="mb-3">
-              {/* <label htmlFor="conference">Conference</label> */}
-                <select
-                  // required
-                  className="form-select"
-                  aria-label="Conference Select"
-                  name="conference"
-                  onChange={store.updateUpdateTeamFormField}
-                >
-                  <option value='' defaultValue>Select Conference</option>
-                  {store.conferences.map((conf, i) => {
-                    return (
-                      <option key={i} value={conf.name}>
-                        {conf.name}
-                      </option>
-                    );
-                  })}
-                </select>
-              </div>
-              {/* <div className="form-floating mb-3">
+              <div className="form-floating mb-3">
                 <input
                   disabled
                   type="text"
@@ -99,24 +66,24 @@ export default function UpdateTeam() {
                   name="conference"
                   id="conference"
                   placeholder=""
-                  value={store.updateTeamForm.conference}
+                  value={store.team.conference}
                   onChange={store.updateUpdateTeamFormField}
                 />
                 <label htmlFor="conference">Conference</label>
-              </div> */}
+              </div>
             </div>
           </div>
           <div className="row">
             <div className="col">
               <div className="form-floating mb-3">
                 <input
-                  required
+                  disabled
                   type="text"
                   className="form-control"
                   name="name"
                   id="name"
                   placeholder=""
-                  value={store.updateTeamForm.name}
+                  value={store.team.name}
                   onChange={store.updateUpdateTeamFormField}
                 />
                 <label htmlFor="name">Team Name</label>
@@ -125,13 +92,13 @@ export default function UpdateTeam() {
             <div className="col">
               <div className="form-floating mb-3">
               <input
-                  // required
+                  required
                   type="text"
                   className="form-control"
                   name="location"
                   id="location"
                   placeholder=""
-                  value={store.updateTeamForm.location}
+                  value={store.team.location}
                   onChange={store.updateUpdateTeamFormField}
                 />
                 <label htmlFor="location">Location</label>
@@ -142,13 +109,13 @@ export default function UpdateTeam() {
             <div className="col">
               <div className="form-floating mb-3">
               <input
-                  // required
+                  required
                   type="text"
                   className="form-control"
                   name="captain"
                   id="captain"
                   placeholder=""
-                  value={store.updateTeamForm.captain}
+                  value={store.team.captain}
                   onChange={store.updateUpdateTeamFormField}
                 />
                 <label htmlFor="captain">Captain (Player 1)</label>
@@ -157,13 +124,13 @@ export default function UpdateTeam() {
             <div className="col">
               <div className="form-floating mb-3">
               <input
-                  // required
+                  required
                   type="text"
                   className="form-control"
                   name="partner"
                   id="partner"
                   placeholder=""
-                  value={store.updateTeamForm.partner}
+                  value={store.team.partner}
                   onChange={store.updateUpdateTeamFormField}
                 />
                 <label htmlFor="partner">Partner (Player 2)</label>
@@ -174,13 +141,13 @@ export default function UpdateTeam() {
             <div className="col">
               <div className="form-floating mb-3">
               <input
-                  // required
+                  required
                   type="email"
                   className="form-control"
                   name="email"
                   id="email"
                   placeholder=""
-                  value={store.updateTeamForm.email}
+                  value={store.team.email}
                   onChange={store.updateUpdateTeamFormField}
                 />
                 <label htmlFor="email">Captain Email Address</label>
@@ -189,13 +156,13 @@ export default function UpdateTeam() {
             <div className="col">
               <div className="form-floating mb-3">
               <input
-                  // required
+                  required
                   type="phone"
                   className="form-control"
                   name="phone"
                   id="phone"
                   placeholder=""
-                  value={store.updateTeamForm.phone}
+                  value={store.team.phone}
                   onChange={store.updateUpdateTeamFormField}
                 />
                 <label htmlFor="phone">Captain Phone Number</label>

@@ -37,8 +37,10 @@ const spadesStore = create((set) => ({
   teamGames: null,
 
   colors: ['primary', 'success', 'danger',],
-  // 'info', 'secondary', 'dark', ],
 
+/* ------------------- *
+ *    ADD TEAM FORM    *
+ * ------------------- */
   addTeamForm: {
     name: "",
     location: "",
@@ -108,12 +110,103 @@ const spadesStore = create((set) => ({
     });
   },
 
+/* ------------------- *
+ *  UPDATE TEAM FORM   *
+ * ------------------- */
+
+  updateTeamForm: {
+    _id: "",
+    name: "",
+    location: "",
+    division: "",
+    conference: "",
+    captain: "",
+    partner: "",
+    email: "",
+    phone: "",
+  },
+
+  updateUpdateTeamFormField: (e) => {
+    const { name, value } = e.target;
+    console.log(e.target, e.target.value);
+
+    set((state) => {
+      return {
+        updateTeamForm: {
+          ...state.updateTeamForm,
+          [name]: value,
+        },
+      };
+    });
+  },
+
+  resetUpdateTeamForm: (e) => {
+    console.log('Reset form');
+
+    set({
+      updateTeamForm: {
+        name: "",
+        location: "",
+        division: "",
+        conference: "",
+        captain: "",
+        partner: "",
+        email: "",
+        phone: "",
+      },
+    });
+  },
+
+  updateTeam: async (e) => {
+    // e.preventDefault();
+
+    const { updateTeamForm, teams } = spadesStore.getState();
+
+    // send update request
+    console.log(updateTeamForm);
+    const res = await axios.put("/teams", {
+      name: updateTeamForm.name,
+      location: updateTeamForm.location,
+      division: updateTeamForm.division,
+      conference: updateTeamForm.conference,
+      captain: updateTeamForm.captain,
+      partner: updateTeamForm.partner,
+      email: updateTeamForm.email,
+      phone: updateTeamForm.phone,
+    });
+    console.log('response', res);
+
+    // update teams
+    const newTeams = [...teams]
+    const teamIndex = teams.findIndex(team => {
+      return team._id === updateTeamForm._id
+    })
+    newTeams[teamIndex] = res.data.team
+
+    // update state and clear form
+    set({
+      teams: newTeams,
+      updateTeamForm: {
+        name: "",
+        location: "",
+        division: "",
+        conference: "",
+        captain: "",
+        partner: "",
+        email: "",
+        phone: "",
+      },
+    });
+  },
+
+
+
   pages: {
-    teams: ["Add Team"],
-    games: ["Add Game"],
+    teams:  ["Add Team"],
+    games:  ["Add Game"],
     single: ["All Teams", "Update Team", "Delete Team"],
-    add: ["Return"],
-    none: [],
+    add:    ["Return"],
+    none:   [],
   },
 
   getTeams: async () => {
