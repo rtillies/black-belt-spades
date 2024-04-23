@@ -20,6 +20,10 @@ export default function HeaderButton({text, group}) {
       case 'Add Game':
         navigate('/add-game')
         break;
+      case 'Return':
+        navigate(-1, {
+          fallback: '/'
+        })
       default:
         return
     }

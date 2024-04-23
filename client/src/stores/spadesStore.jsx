@@ -109,7 +109,7 @@ const spadesStore = create((set) => ({
     teams: ["Add Team"],
     games: ["Add Game"],
     single: ["All Teams"],
-    add: ["Cancel"],
+    add: ["Return"],
     none: [],
   },
 

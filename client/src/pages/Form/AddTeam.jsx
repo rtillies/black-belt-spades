@@ -5,18 +5,16 @@ import { useNavigate } from "react-router-dom";
 
 export default function AddTeam() {
   const [message, setMessage] = useState()
-  // const message = useRef('Hello Earth')
   const store = spadesStore();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     console.log("Submit team event", e.target);
-    // message.current = "Submitted"
-    // console.log(message.current);
     e.preventDefault();
     console.log("Pass prevent default");
     setMessage(`New team added: ${store.addTeamForm.name}`)
     store.resetAddTeamForm()
+
     // Navigate to team page
     // navigate('/teams')
   };
@@ -35,7 +33,7 @@ export default function AddTeam() {
 
   return (
     <>
-      <PageHeader header="Add New Team" buttonList="none" />
+      <PageHeader header="Add New Team" buttonList="add" />
       <div className="add-team form-display">
         <form onSubmit={handleSubmit}>
           <div className="row">
