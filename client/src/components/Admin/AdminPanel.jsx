@@ -9,12 +9,11 @@ export default function AdminPanel({header}) {
 
   return (
     <>
-      <div className="admin-panel mx-4">
+      <div className="admin-panel border-bottom border-secondary-subtle mx-4">
         <h3>{header}</h3>
         {actions.map((action, i) => {
           return <PanelButton key={i} color={i} text={`${action}`} group={`${single}`} />
         })}
-        <hr />
       </div>
     </>
   );
