@@ -9,7 +9,7 @@ import GamesPage from '../../pages/DataPage/GamesPage'
 import TeamsPage from '../../pages/DataPage/TeamsPage'
 import SingleTeam from '../../pages/DataPage/SingleTeam'
 import AddTeam from '../../pages/AddPage/AddTeam'
-import Admin from '../../pages/Admin/Admin'
+import Admin from '../../pages/Dashboard/Dashboard'
 
 function App() {
   const [count, setCount] = useState(0)
