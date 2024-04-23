@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import spadesStore from '../../stores/spadesStore';
 
-export default function HeaderButton({text}) {
+export default function HeaderButton({text, group}) {
   const navigate = useNavigate()
   const store = spadesStore();
 
@@ -16,6 +16,9 @@ export default function HeaderButton({text}) {
         break;
       case 'Add Team':
         navigate('/add-team')
+        break;
+      case 'Add Game':
+        navigate('/add-game')
         break;
       default:
         return
