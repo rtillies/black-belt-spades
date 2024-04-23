@@ -52,9 +52,9 @@ export default function NavbarList() {
                   Dashboard
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <hr className="dropdown-divider" />
-              </li>
+              </li> */}
             </ul>
           </li>
           <li className="nav-item dropdown">
