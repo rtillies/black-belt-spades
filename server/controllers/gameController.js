@@ -37,8 +37,8 @@ const setGame = asyncHandler(async (req, res) => {
 const getGamesByTeam = asyncHandler(async (req, res) => {
   const games = await Game.findByTeam(req.params.team)
   if (games.length === 0) {
-    res.status(400);
-    throw new Error(`No games found: ${req.params.name}`);
+    // res.status(400);
+    // throw new Error(`No games found: ${req.params.name}`);
   }
   res.status(200).json(games)
 });
