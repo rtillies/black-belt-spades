@@ -13,9 +13,10 @@ export default function HeaderButton({text}) {
     switch(value) {
       case 'All Teams':
         navigate('/teams')
+        break;
       case 'Add Team':
         navigate('/addteam')
-
+        break;
       default:
         return
     }
