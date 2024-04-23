@@ -16,7 +16,7 @@ export default function Team(props) {
     <>
       <tr key={t.teamID}>
         <th scope="row">
-          <Link className='teamLink' to='/show' onClick={() => store.handleTeamClick(t)}>
+          <Link className='teamLink' to='/show-team' onClick={() => store.handleTeamClick(t)}>
           {t.name}
           </Link>
         </th>

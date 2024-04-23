@@ -9,6 +9,7 @@ import GamesPage from '../../pages/DataPage/GamesPage'
 import TeamsPage from '../../pages/DataPage/TeamsPage'
 import SingleTeam from '../../pages/DataPage/SingleTeam'
 import AddTeam from '../../pages/Form/AddTeam'
+import UpdateTeam from '../../pages/Form/UpdateTeam'
 import Admin from '../../pages/Dashboard/Dashboard'
 
 function App() {
@@ -24,8 +25,9 @@ function App() {
           <Route path='/variations' element={<Variations />} />
           <Route path='/games' element={<GamesPage />} />
           <Route path='/teams' element={<TeamsPage />} />
-          <Route path='/show' element={<SingleTeam />} />
+          <Route path='/show-team' element={<SingleTeam />} />
           <Route path='/add-team' element={<AddTeam />} />
+          <Route path='/update-team' element={<UpdateTeam />} />
           <Route path='/admin' element={<Admin />} />
           <Route path='/login' element={<Admin />} />
           <Route path='*' element={<Custom404 />} />
