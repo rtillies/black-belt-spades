@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import spadesStore from "../../stores/spadesStore";
 import PageHeader from "../../components/PageHeader/PageHeader";
 
 export default function AddTeam() {
   const store = spadesStore();
+
+  useEffect(() => {
+    store.getData('divisions');
+  }, []);
+
+  
+  // const divisions = store.divisions;
+  // console.log(store.divisions);
   if (store.addTeamForm._id) return <></>;
 
   return (
@@ -43,8 +51,15 @@ export default function AddTeam() {
           </div>
           <div className="row">
             <div className="col">
+              {/* <div className="form-floating mb-3"> */}
               <div className="form-floating mb-3">
-                <input
+                <select className="form-select" aria-label="Division Select">
+                  <option defaultValue>Division</option>
+                  {store.divisions.map((div, i) => {
+                    return <option value={div.name}>{div.name}</option>
+                  })}
+                </select>
+                {/* <input
                   type="text"
                   className="form-control"
                   name="division"
@@ -53,12 +68,14 @@ export default function AddTeam() {
                   value={store.addTeamForm.division}
                   onChange={store.updateAddTeamFormField}
                 />
-                <label htmlFor="division">Division</label>
+                <label htmlFor="division">Division</label> */}
               </div>
             </div>
+
             <div className="col">
               <div className="form-floating mb-3">
                 <input
+                  disabled
                   type="text"
                   className="form-control"
                   name="conference"
@@ -72,7 +89,7 @@ export default function AddTeam() {
             </div>
           </div>
           <div className="row">
-          <div className="col">
+            <div className="col">
               <div className="form-floating mb-3">
                 <input
                   type="text"
@@ -102,7 +119,7 @@ export default function AddTeam() {
             </div>
           </div>
           <div className="row">
-          <div className="col">
+            <div className="col">
               <div className="form-floating mb-3">
                 <input
                   type="email"
@@ -134,9 +151,11 @@ export default function AddTeam() {
           <button className="btn btn-outline-primary mx-2" type="submit">
             Add Team
           </button>
-          <button 
+          <button
             onClick={store.resetAddTeamForm}
-            className="btn btn-outline-primary mx-2" type="reset">
+            className="btn btn-outline-primary mx-2"
+            type="reset"
+          >
             Reset
           </button>
         </form>
