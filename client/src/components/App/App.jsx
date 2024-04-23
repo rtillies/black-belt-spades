@@ -8,7 +8,7 @@ import Custom404 from '../../pages/Custom404/Custom404'
 import GamesPage from '../../pages/DataPage/GamesPage'
 import TeamsPage from '../../pages/DataPage/TeamsPage'
 import SingleTeam from '../../pages/DataPage/SingleTeam'
-import AddTeam from '../../pages/AddPage/AddTeam'
+import AddTeam from '../../pages/Form/AddTeam'
 import Admin from '../../pages/Dashboard/Dashboard'
 
 function App() {
