@@ -8,8 +8,8 @@ export default function TeamsPage() {
   const store = spadesStore();
 
   useEffect(() => {
-    // store.getData('conferences');
-    // store.getData('divisions');
+    store.getData('conferences');
+    store.getData('divisions');
     // store.getData('teams');
     store.getTeams();
     // store.sortTeamsByName();

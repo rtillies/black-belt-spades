@@ -6,12 +6,14 @@ export default function AddTeam() {
   const store = spadesStore();
 
   useEffect(() => {
-    store.getData('divisions');
+    // store.getData('divisions');
+    // console.log('Get divisions');
+    // store.getData('conferences');
   }, []);
 
   
   // const divisions = store.divisions;
-  // console.log(store.divisions);
+  console.log(store.divisions);
   if (store.addTeamForm._id) return <></>;
 
   return (
@@ -51,12 +53,11 @@ export default function AddTeam() {
           </div>
           <div className="row">
             <div className="col">
-              {/* <div className="form-floating mb-3"> */}
               <div className="form-floating mb-3">
                 <select className="form-select" aria-label="Division Select">
                   <option defaultValue>Division</option>
                   {store.divisions.map((div, i) => {
-                    return <option value={div.name}>{div.name}</option>
+                    return <option key={i} value={div.name}>{div.name}</option>
                   })}
                 </select>
                 {/* <input
@@ -73,7 +74,16 @@ export default function AddTeam() {
             </div>
 
             <div className="col">
-              <div className="form-floating mb-3">
+            <div className="form-floating mb-3">
+                <select className="form-select" aria-label="Conference Select">
+                  <option defaultValue>Conference</option>
+                  {store.conferences.map((conf, i) => {
+                    return <option key={i} value={conf.name}>{conf.name}</option>
+                  })}
+                </select>
+                </div>
+
+              {/* <div className="form-floating mb-3">
                 <input
                   disabled
                   type="text"
@@ -85,7 +95,7 @@ export default function AddTeam() {
                   onChange={store.updateAddTeamFormField}
                 />
                 <label htmlFor="conference">Conference</label>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="row">
