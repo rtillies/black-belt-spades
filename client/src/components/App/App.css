@@ -17,10 +17,15 @@
 
 .page-header, .admin-panel {
   display: flex;
+  width: 60%;
 }
 
 .page-btn, .panel-btn {
   margin: auto;
   /* padding: 12px; */
   /* flex: 1; */
+}
+
+.admin-panel h3 {
+  width: 30%;
 }
