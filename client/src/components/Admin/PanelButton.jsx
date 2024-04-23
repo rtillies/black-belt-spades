@@ -59,7 +59,7 @@ export default function PanelButton({color, text, group}) {
     <>
       <button value={`${text}-${group}`} 
         onClick={handleButtonClick}
-        className={`btn btn-outline-${colors[color]} mx-4 panel-btn`}>{text}</button>
+        className={`btn btn-outline-${store.colors[color]} mx-4 panel-btn`}>{text}</button>
     </>
   )
 }

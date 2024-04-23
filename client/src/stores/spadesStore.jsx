@@ -36,6 +36,9 @@ const spadesStore = create((set) => ({
   team: null,
   teamGames: null,
 
+  colors: ['primary', 'success', 'danger',],
+  // 'info', 'secondary', 'dark', ],
+
   addTeamForm: {
     name: "",
     location: "",
@@ -108,7 +111,7 @@ const spadesStore = create((set) => ({
   pages: {
     teams: ["Add Team"],
     games: ["Add Game"],
-    single: ["All Teams"],
+    single: ["All Teams", "Update Team", "Delete Team"],
     add: ["Return"],
     none: [],
   },

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import spadesStore from '../../stores/spadesStore';
 
-export default function HeaderButton({text, group}) {
+export default function HeaderButton({text, color}) {
   const navigate = useNavigate()
   const store = spadesStore();
 
@@ -33,7 +33,7 @@ export default function HeaderButton({text, group}) {
     <>
       <button value={text} 
         onClick={handleButtonClick}
-        className="btn btn-outline-primary mx-4 page-btn">{text}</button>
+        className={`btn btn-outline-${store.colors[color]} mx-4 page-btn`}>{text}</button>
     </>
   )
 }
