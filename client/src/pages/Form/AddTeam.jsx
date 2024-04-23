@@ -1,29 +1,34 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import spadesStore from "../../stores/spadesStore";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import { useNavigate } from "react-router-dom";
 
 export default function AddTeam() {
+  const [message, setMessage] = useState()
+  // const message = useRef('Hello Earth')
   const store = spadesStore();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    console.log('Submit team event', e.target);
+    console.log("Submit team event", e.target);
+    // message.current = "Submitted"
+    // console.log(message.current);
     e.preventDefault();
-    console.log('Pass prevent default');
-
-    await store.addTeam();
-
+    console.log("Pass prevent default");
+    setMessage(`New team added: ${store.addTeamForm.name}`)
+    store.resetAddTeamForm()
     // Navigate to team page
     // navigate('/teams')
-  }
+  };
 
-  // useEffect(() => {
+    useEffect(() => {
     // store.getData('divisions');
     // console.log('Get divisions');
     // store.getData('conferences');
-  // }, []);
-  
+      // message.current = "Submitted"
+    // });
+    }, []);
+
   // const divisions = store.divisions;
   // console.log(store.divisions);
   if (store.addTeamForm._id) return <></>;
@@ -32,19 +37,27 @@ export default function AddTeam() {
     <>
       <PageHeader header="Add New Team" buttonList="none" />
       <div className="add-team form-display">
-      <form onSubmit={handleSubmit}>
-        <div className="row">
+        <form onSubmit={handleSubmit}>
+          <div className="row">
             <div className="col">
               {/* <div className="form-floating mb-3"> */}
               <div className="mb-3">
-                <select 
-                  className="form-select" aria-label="Division Select"
-                  name='division'
+                {/* <label htmlFor="division">Division</label> */}
+                <select
+                  // required
+                  className="form-select"
+                  aria-label="Division Select"
+                  name="division"
                   onChange={store.updateAddTeamFormField}
-                  >
-                  <option defaultValue>Division</option>
+                >
+                  {/* <option defaultValue>Select Division</option> */}
+                  <option value='' defaultValue>Select Division</option>
                   {store.divisions.map((div, i) => {
-                    return <option key={i} value={div.name}>{div.name}</option>
+                    return (
+                      <option key={i} value={div.name}>
+                        {div.name}
+                      </option>
+                    );
                   })}
                 </select>
                 {/* <input
@@ -62,17 +75,24 @@ export default function AddTeam() {
             <div className="col">
               {/* <div className="form-floating mb-3"> */}
               <div className="mb-3">
-                <select 
-                  className="form-select" aria-label="Conference Select"
-                  name='conference'
+              {/* <label htmlFor="conference">Conference</label> */}
+                <select
+                  // required
+                  className="form-select"
+                  aria-label="Conference Select"
+                  name="conference"
                   onChange={store.updateAddTeamFormField}
                 >
-                  <option defaultValue>Conference</option>
+                  <option value='' defaultValue>Select Conference</option>
                   {store.conferences.map((conf, i) => {
-                    return <option key={i} value={conf.name}>{conf.name}</option>
+                    return (
+                      <option key={i} value={conf.name}>
+                        {conf.name}
+                      </option>
+                    );
                   })}
                 </select>
-                </div>
+              </div>
               {/* <div className="form-floating mb-3">
                 <input
                   disabled
@@ -92,6 +112,7 @@ export default function AddTeam() {
             <div className="col">
               <div className="form-floating mb-3">
                 <input
+                  required
                   type="text"
                   className="form-control"
                   name="name"
@@ -105,7 +126,8 @@ export default function AddTeam() {
             </div>
             <div className="col">
               <div className="form-floating mb-3">
-                <input
+              <input
+                  // required
                   type="text"
                   className="form-control"
                   name="location"
@@ -121,7 +143,8 @@ export default function AddTeam() {
           <div className="row">
             <div className="col">
               <div className="form-floating mb-3">
-                <input
+              <input
+                  // required
                   type="text"
                   className="form-control"
                   name="captain"
@@ -135,7 +158,8 @@ export default function AddTeam() {
             </div>
             <div className="col">
               <div className="form-floating mb-3">
-                <input
+              <input
+                  // required
                   type="text"
                   className="form-control"
                   name="partner"
@@ -151,7 +175,8 @@ export default function AddTeam() {
           <div className="row">
             <div className="col">
               <div className="form-floating mb-3">
-                <input
+              <input
+                  // required
                   type="email"
                   className="form-control"
                   name="email"
@@ -165,7 +190,8 @@ export default function AddTeam() {
             </div>
             <div className="col">
               <div className="form-floating mb-3">
-                <input
+              <input
+                  // required
                   type="phone"
                   className="form-control"
                   name="phone"
@@ -178,10 +204,7 @@ export default function AddTeam() {
               </div>
             </div>
           </div>
-          <button 
-            className="btn btn-outline-primary mx-2" 
-            type="submit"
-          >
+          <button className="btn btn-outline-primary mx-2" type="submit">
             Add Team
           </button>
           <button
@@ -192,6 +215,7 @@ export default function AddTeam() {
             Reset
           </button>
         </form>
+        <h4 id='message' className="m-2">{message}</h4>
       </div>
     </>
   );
