@@ -25,7 +25,7 @@ function App() {
           <Route path='/games' element={<GamesPage />} />
           <Route path='/teams' element={<TeamsPage />} />
           <Route path='/show' element={<SingleTeam />} />
-          <Route path='/addTeam' element={<AddTeam />} />
+          <Route path='/add-team' element={<AddTeam />} />
           <Route path='/admin' element={<Admin />} />
           <Route path='/login' element={<Admin />} />
           <Route path='*' element={<Custom404 />} />

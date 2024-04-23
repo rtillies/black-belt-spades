@@ -15,7 +15,7 @@ export default function HeaderButton({text}) {
         navigate('/teams')
         break;
       case 'Add Team':
-        navigate('/addteam')
+        navigate('/add-team')
         break;
       default:
         return
