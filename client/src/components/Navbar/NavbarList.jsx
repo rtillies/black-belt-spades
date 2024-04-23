@@ -11,17 +11,12 @@ export default function NavbarList() {
               Home
             </Link>
           </li>
-          {/* <li className="nav-item">
-            <Link className="nav-link" to="/lessons">
-              Lessons
-            </Link>
-          </li> */}
           <li className="nav-item">
             <Link className="nav-link" to="/variations">
               Game Variations
             </Link>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link className="nav-link" to="/teams">
               Teams
             </Link>
@@ -30,6 +25,37 @@ export default function NavbarList() {
             <Link className="nav-link" to="/games">
               Games
             </Link>
+          </li> */}
+          <li className="nav-item dropdown">
+            <a
+              className="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Tournament
+            </a>
+            <ul className="dropdown-menu">
+              <li>
+                <Link className="dropdown-item" to="/teams">
+                  All Teams
+                </Link>
+              </li>
+              <li>
+                <Link className="dropdown-item" to="/games">
+                  All Games
+                </Link>
+              </li>
+              <li>
+                <Link className="dropdown-item" to="/admin">
+                  Dashboard
+                </Link>
+              </li>
+              <li>
+                <hr className="dropdown-divider" />
+              </li>
+            </ul>
           </li>
           <li className="nav-item dropdown">
             <a
