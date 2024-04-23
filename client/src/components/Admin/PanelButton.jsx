@@ -24,6 +24,7 @@ export default function PanelButton({color, text, group}) {
         break;
       case 'add-team':
         console.log('Add team');
+        navigate('/add-team')
         break;
       case 'update-team':
         console.log('Update team');
