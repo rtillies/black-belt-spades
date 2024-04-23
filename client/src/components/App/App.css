@@ -15,11 +15,11 @@
   margin: 0 auto;
 }
 
-.page-header {
+.page-header, .admin-panel {
   display: flex;
 }
 
-.page-btn {
+.page-btn, .panel-btn {
   margin: auto;
   /* padding: 12px; */
   /* flex: 1; */
