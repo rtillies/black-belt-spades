@@ -20,6 +20,10 @@
   width: 60%;
 }
 
+.admin-panel {
+  margin-bottom: 2%;
+}
+
 .page-btn, .panel-btn {
   margin: auto;
   /* padding: 12px; */
