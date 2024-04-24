@@ -18,7 +18,7 @@ export default function TeamsPage() {
 
   return (
     <>
-      <PageHeader header="Teams" buttonList='teams' />
+      <PageHeader header="All Teams" buttonList='teams' />
       <Teams />
     </>
   )

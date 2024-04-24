@@ -19,7 +19,7 @@ export default function GamesPage() {
   return (
     <>
       {/* <PageHeader header="Games" /> */}
-      <PageHeader header="Games" buttonList='games' />
+      <PageHeader header="All Games" buttonList='games' />
       <Games />
     </>
   )
