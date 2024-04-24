@@ -1,36 +1,36 @@
 const divisions = [
   {
-    "divID": "SP",
+    // "divID": "SP",
     "name": "State Property",
     "description": "State Property division, Eastern conference",
     "conference" : "East"
   },
   {
-    "divID": "BB",
+    // "divID": "BB",
     "name": "Bad Boy",
     "description": "Bad Boy division, Eastern conference",
     "conference" : "East"
   },
   {
-    "divID": "SSD",
+    // "divID": "SSD",
     "name": "So So Def",
     "description": "So So Def division, Eastern conference",
     "conference" : "East"
   },
   {
-    "divID": "CM",
+    // "divID": "CM",
     "name": "Cash Money",
     "description": "Cash Money division, Western conference",
     "conference" : "West"
   },
   {
-    "divID": "DR",
+    // "divID": "DR",
     "name": "Death Row",
     "description": "Death Row division, Western conference",
     "conference" : "West"
   },
   {
-    "divID": "G",
+    // "divID": "G",
     "name": "G.O.O.D.",
     "description": "G.O.O.D. division, Western conference",
     "conference" : "West"
