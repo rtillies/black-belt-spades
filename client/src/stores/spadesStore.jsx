@@ -152,12 +152,25 @@ const spadesStore = create((set) => ({
   },
 
   addGame: async (e) => {
-    const { addGameForm, games } = spadesStore.getState();
+    const { addGameForm, games, teams } = spadesStore.getState();
 
     // create game
     console.log(addGameForm);
     const res = await axios.post("/games", addGameForm);
     console.log('response', res);
+
+    const winner = teams.find(({ name }) => name === res.data.winner);
+    const loser = teams.find(({ name }) => name === res.data.loser);
+
+    const changeWins = await axios.patch(`/teams/${winner.name}`, {
+      wins: winner.wins + 1,
+    });
+    const changeLoss = await axios.patch(`/teams/${loser.name}`, {
+      loss: loser.loss + 1,
+    });
+    
+    console.log('winner', winner);
+    console.log('loser', loser);
 
     // update state
     // clear form
@@ -275,18 +288,11 @@ const spadesStore = create((set) => ({
     })
     newTeams[teamIndex] = res.data.team
 
-    // update state and clear form
+    // update state
+    // no need to clear form
     set({
       // teams: newTeams,
       updateTeamForm: {
-        // name: "",
-        // location: "",
-        // division: "",
-        // conference: "",
-        // captain: "",
-        // partner: "",
-        // email: "",
-        // phone: "",
         _id: updateTeamForm._id,
         name: updateTeamForm.name,
         location: updateTeamForm.location,
