@@ -14,12 +14,14 @@ export default function DeleteTeam() {
     console.log("Submit team event", e.target);
     e.preventDefault();
     console.log("Pass prevent default");
+    await store.deleteTeam();
     setMessage(`Team Deleted: ${store.team.name}`);
-    store.deleteTeam();
     // store.resetUpdateTeamForm()
 
     // Navigate to team page
-    // navigate('/teams')
+    setTimeout(() => {
+      navigate('/teams')
+    }, 2000);
   };
 
   useEffect(() => {
