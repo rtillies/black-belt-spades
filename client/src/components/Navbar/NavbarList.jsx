@@ -29,16 +29,16 @@ export default function NavbarList() {
             <ul className="dropdown-menu">
               <li>
                 <Link className="dropdown-item" to="/teams">
-                  All Teams
+                  Teams
                 </Link>
               </li>
               <li>
                 <Link className="dropdown-item" to="/games">
-                  All Games
+                  Games
                 </Link>
               </li>
               <li>
-                <Link className="dropdown-item" to="/admin">
+                <Link className="dropdown-item disabled" to="/admin">
                   Dashboard
                 </Link>
               </li>
@@ -118,7 +118,7 @@ export default function NavbarList() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/login">
+            <Link className="nav-link disabled" to="/login">
               Log In
             </Link>
           </li>
