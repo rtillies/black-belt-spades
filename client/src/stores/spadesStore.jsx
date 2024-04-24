@@ -111,6 +111,70 @@ const spadesStore = create((set) => ({
   },
 
 /* ------------------- *
+ *    ADD GAME FORM    *
+ * ------------------- */
+  addGameForm: {
+    gameID: "",
+    date: "",
+    homeTeam: "",
+    awayTeam: "",
+    homeScore: 0,
+    awayScore: 0,
+  },
+
+  updateAddGameFormField: (e) => {
+    const { name, value } = e.target;
+    console.log(e.target, e.target.value);
+
+    set((state) => {
+      return {
+        addGameForm: {
+          ...state.addGameForm,
+          [name]: value,
+        },
+      };
+    });
+  },
+
+  resetAddGameForm: (e) => {
+    console.log('Reset form');
+
+    set({
+      addGameForm: {
+        gameID: "",
+        date: "",
+        homeTeam: "",
+        awayTeam: "",
+        homeScore: 0,
+        awayScore: 0,
+      },
+    });
+  },
+
+  addGame: async (e) => {
+    const { addGameForm, games } = spadesStore.getState();
+
+    // create game
+    console.log(addGameForm);
+    const res = await axios.post("/games", addGameForm);
+    console.log('response', res);
+
+    // update state
+    // clear form
+    set({
+      teams: [...games, res.data.game],
+      addGameForm: {
+        gameID: "",
+        date: "",
+        homeTeam: "",
+        awayTeam: "",
+        homeScore: 0,
+        awayScore: 0,
+      },
+    });
+  },
+
+/* ------------------- *
  *  UPDATE TEAM FORM   *
  * ------------------- */
 
