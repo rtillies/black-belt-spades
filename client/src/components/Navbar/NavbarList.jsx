@@ -16,16 +16,6 @@ export default function NavbarList() {
               Variations
             </Link>
           </li>
-          {/* <li className="nav-item">
-            <Link className="nav-link" to="/teams">
-              Teams
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/games">
-              Games
-            </Link>
-          </li> */}
           <li className="nav-item dropdown">
             <a
               className="nav-link dropdown-toggle"
@@ -84,6 +74,24 @@ export default function NavbarList() {
                   target="_blank"
                 >
                   The Game of Spades
+                </a>
+              </li>
+              <li>
+                <a
+                  className="dropdown-item"
+                  href="https://www.blvckspades.com/"
+                  target="_blank"
+                >
+                  Blvck Spades
+                </a>
+              </li>
+              <li>
+                <a
+                  className="dropdown-item"
+                  href="https://www.spades-brand.com/"
+                  target="_blank"
+                >
+                  Spades Brand
                 </a>
               </li>
               <li>
