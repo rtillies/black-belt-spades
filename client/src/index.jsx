@@ -9,8 +9,8 @@ import './scss/styles.scss'
 import * as bootstrap from 'bootstrap'
 import './index.css'
 
-// axios.defaults.baseURL = "https://black-belt-server.onrender.com/api";
-axios.defaults.baseURL = "http://localhost:5050/api";
+axios.defaults.baseURL = "https://black-belt-server.onrender.com/api";
+// axios.defaults.baseURL = "http://localhost:5050/api";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
