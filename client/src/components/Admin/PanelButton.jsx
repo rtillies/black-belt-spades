@@ -15,6 +15,7 @@ export default function PanelButton({color, text, group}) {
     switch(value) {
       case 'add-game':
         console.log('Add game');
+        navigate('/add-game')
         break;
       case 'update-game':
         console.log('Update game');
