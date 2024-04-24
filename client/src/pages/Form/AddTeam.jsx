@@ -12,8 +12,9 @@ export default function AddTeam() {
     console.log("Submit team event", e.target);
     e.preventDefault();
     console.log("Pass prevent default");
+    store.addTeam()
+    // store.resetAddTeamForm()
     setMessage(`New team added: ${store.addTeamForm.name}`)
-    store.resetAddTeamForm()
 
     // Navigate to team page
     // navigate('/teams')
