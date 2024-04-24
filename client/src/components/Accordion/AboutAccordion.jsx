@@ -135,7 +135,7 @@ export default function AboutAccordion() {
           </div>
         </div>
       </div>
-      {/* <div className="accordion-item">
+      <div className="accordion-item">
         <h2 className="accordion-header">
           <button
             className="accordion-button collapsed"
@@ -145,7 +145,7 @@ export default function AboutAccordion() {
             aria-expanded="false"
             aria-controls="collapseFour"
           >
-            Ace High (no jokers)
+            More Information
           </button>
         </h2>
         <div
@@ -154,34 +154,22 @@ export default function AboutAccordion() {
           data-bs-parent="#accordionSpades"
         >
           <div className="accordion-body">
-            <div>
-              <img
-                className="rounded playing-card"
-                src="/cards/spade_01_ace.png"
-                alt="Ace Spade"
-              />
-              <img
-                className="rounded playing-card"
-                src="/cards/spade_13_king.png"
-                alt="King Spade"
-              />
-              <img
-                className="rounded playing-card"
-                src="/cards/spade_12_queen.png"
-                alt="Queen Spade"
-              />
-              <img
-                className="rounded playing-card"
-                src="/cards/spade_11_jack.png"
-                alt="Jack Spade"
-              />
-            </div>
-            The highest card in the deck is the Ace Spade. There are no jokers,
-            and the deuces are not <i>wild</i> in this variation. No cards are
-            removed from the deck.
+          <li>
+                Consult the README on the Black Belt Spades {" "}
+                <strong>
+                  <em>
+                    <Link
+                      to="https://github.com/rtillies/black-belt-spades"
+                      target="_blank"
+                    >
+                      GitHub repository
+                    </Link>
+                  </em>
+                </strong>
+              </li>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
