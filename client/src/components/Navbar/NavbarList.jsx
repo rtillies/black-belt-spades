@@ -13,7 +13,7 @@ export default function NavbarList() {
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/variations">
-              Game Variations
+              Variations
             </Link>
           </li>
           {/* <li className="nav-item">
