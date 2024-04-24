@@ -15,7 +15,9 @@
   margin: 0 auto;
 }
 
-.page-header, .admin-panel {
+.page-header, 
+.admin-panel,
+.confirm-delete {
   display: flex;
 }
 
@@ -26,6 +28,11 @@
 .admin-panel {
   width: 60%;
   margin-bottom: 2%;
+}
+
+.confirm-delete {
+  /* visibility: hidden; */
+  display: none;
 }
 
 .page-btn, .panel-btn {
