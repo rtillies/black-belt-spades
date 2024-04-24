@@ -13,7 +13,7 @@ export default function TeamsPage() {
     // store.getData('teams');
     store.getTeams();
     // store.sortTeamsByName();
-    // store.getData('games');
+    store.getData('games');
   }, []);
 
   return (

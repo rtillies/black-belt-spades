@@ -13,6 +13,7 @@ export default function GamesPage() {
     // store.getData('teams');
     // store.getData('games');
     store.getGames();
+    store.getTeams();
   }, []);
 
   return (

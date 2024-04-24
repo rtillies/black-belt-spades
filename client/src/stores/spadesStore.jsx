@@ -154,6 +154,8 @@ const spadesStore = create((set) => ({
   addGame: async (e) => {
     const { addGameForm, games } = spadesStore.getState();
 
+    const gameID = 1000;
+
     // create game
     console.log(addGameForm);
     const res = await axios.post("/games", addGameForm);
@@ -162,9 +164,9 @@ const spadesStore = create((set) => ({
     // update state
     // clear form
     set({
-      teams: [...games, res.data.game],
+      // teams: [...games, res.data.game],
       addGameForm: {
-        gameID: "",
+        gameID: gameID,
         date: "",
         homeTeam: "",
         awayTeam: "",
