@@ -249,6 +249,7 @@ const spadesStore = create((set) => ({
 
     set({
       updateTeamForm: {
+        _id: team.name,
         name: team.name,
         location: team.location,
         division: team.division,
