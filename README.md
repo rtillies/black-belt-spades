@@ -36,7 +36,13 @@
 
 ## Notes
 
-* **Login** 
-  * *Login* links to the *Admin Dashboard* in the *Tournament* menu.
-  * In a future iteration, a team or player will be able to login with credentials (username and encrypted password) stored in the database.
+*
 
+## Future Iterations
+* Add, Update, Delete _Conference_ and _Division_
+* Display Teams by _Conference_ and _Division_
+* Determine if a game is played between teams within the same _Conference_ and/or _Division_
+* Display _Conference_ and _Division_ records 
+* Admin login displays Admin Dashboard panel
+  <!-- * Login mock-up available at `/login` -->
+  * Dashboard mock-up available at `/admin`
