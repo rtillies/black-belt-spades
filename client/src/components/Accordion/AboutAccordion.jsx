@@ -14,7 +14,7 @@ export default function AboutAccordion() {
             aria-expanded="true"
             aria-controls="collapseOne"
           >
-            Per Scholas CP 325: Capstone Project
+            General Information
           </button>
         </h2>
         <div
@@ -25,6 +25,9 @@ export default function AboutAccordion() {
           <div className="accordion-body">
             <div>
               <ul>
+                <li>
+                  <strong>Assignment</strong>: Per Scholas CP 325 - Capstone Project
+                </li>
                 <li>
                   <strong>Name</strong>: Richard Tillies
                 </li>
