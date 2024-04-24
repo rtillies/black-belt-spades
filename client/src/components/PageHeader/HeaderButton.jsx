@@ -24,6 +24,13 @@ export default function HeaderButton({text, color}) {
         console.log('form team', store.updateTeamForm);
         navigate('/update-team')
         break;
+      case 'Delete Team':
+        // store.teamToUpdate()
+        // console.log('ready to show update form')
+        // console.log('store team', store.team);
+        // console.log('form team', store.updateTeamForm);
+        navigate('/delete-team')
+        break;
       case 'Add Game':
         navigate('/add-game')
         break;
