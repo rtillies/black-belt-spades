@@ -32,13 +32,31 @@
 
 ## Tournament
 
-* 
+### Teams
+Displays all teams in the tournament
 
-## Notes
+  * *Add Team* button displays a form to add a new team to the database
+    * *Return* button returns to the *All Teams* page
+    * *Add Team* button adds the team to the database
+      * All fields are required
+    * *Reset* button returns all fields to default values
 
-*
+  * Click a *Team Name* to display the games played by that team
+    * *All Teams* button returns to the *All Teams* page
+    * *Update Team* button displays a form to update team information in the database 
+    * *Delete Team* button displays a form to delete a team from the database 
 
-## Future Iterations
+### Games
+  * Displays all games played in the tournament
+  * *Add Game* button displays a form to add a new game to the database
+    * *Return* button returns to the *All Games* page
+    * *Add Game* button adds the team to the database
+      * All fields are required
+    * *Reset* button returns all fields to default values
+
+## Additional Notes
+
+### Future Iterations
 * Add, Update, Delete _Conference_ and _Division_
 * Display Teams by _Conference_ and _Division_
 * Determine if a game is played between teams within the same _Conference_ and/or _Division_
@@ -46,3 +64,4 @@
 * Admin login displays Admin Dashboard panel
   <!-- * Login mock-up available at `/login` -->
   * Dashboard mock-up available at `/admin`
+* Add pagination to the _All Games_ page
