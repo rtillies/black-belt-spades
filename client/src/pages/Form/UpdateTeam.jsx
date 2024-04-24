@@ -167,12 +167,12 @@ export default function UpdateTeam() {
               </div>
             </div>
           </div>
-          <button className="btn btn-outline-primary mx-2" type="submit">
+          <button className="btn btn-success mx-2" type="submit">
             Update Team
           </button>
           <button
             onClick={store.resetUpdateTeamForm}
-            className="btn btn-outline-primary mx-2"
+            className="btn btn-warning mx-2"
             type="reset"
           >
             Reset

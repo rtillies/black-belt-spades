@@ -204,12 +204,12 @@ export default function AddTeam() {
               </div>
             </div>
           </div>
-          <button className="btn btn-outline-primary mx-2" type="submit">
+          <button className="btn btn-success mx-2" type="submit">
             Add Team
           </button>
           <button
             onClick={store.resetAddTeamForm}
-            className="btn btn-outline-primary mx-2"
+            className="btn btn-warning mx-2"
             type="reset"
           >
             Reset
