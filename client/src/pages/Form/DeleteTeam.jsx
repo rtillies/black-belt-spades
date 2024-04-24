@@ -14,17 +14,17 @@ export default function DeleteTeam() {
     console.log("Submit team event", e.target);
     e.preventDefault();
     console.log("Pass prevent default");
-    store.updateTeam()
-    setMessage(`Team Updated: ${store.team.name}`)
-    store.resetUpdateTeamForm()
+    setMessage(`Team Deleted: ${store.team.name}`)
+    store.deleteTeam()
+    // store.resetUpdateTeamForm()
 
     // Navigate to team page
     // navigate('/teams')
   };
 
     useEffect(() => {
-      // console.log('team', store.team);
-      console.log('team', store.updateTeamForm.team);
+      console.log('team', store.team);
+      // console.log('team', store.updateTeamForm.team);
     // });
     }, []);
 
@@ -163,18 +163,18 @@ export default function DeleteTeam() {
               </div>
             </div>
           </div>
-          <button className="btn btn-outline-danger mx-2" type="submit">
+          <button className="btn btn-danger mx-2" type="submit">
             Delete Team
           </button>
-          <button
+          {/* <button
             // onClick={store.resetUpdateTeamForm}
             className="btn btn-outline-primary mx-2"
             type="reset"
           >
             Cancel
-          </button>
+          </button> */}
         </form>
-        {/* <h4 id='message' className="m-2">{message}</h4> */}
+        <h4 id='message' className="m-2">{message}</h4>
       </div>
     </>
   );

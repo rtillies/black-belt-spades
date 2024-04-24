@@ -235,6 +235,31 @@ const spadesStore = create((set) => ({
     });
   },
 
+  deleteTeam: async () => {
+    const { updateTeamForm, teams, team } = spadesStore.getState();
+
+    // delete team
+    // const url_id = `${PATH}/${_id}`
+    // const {teams} = spades.getState();
+    const res = await axios.delete(`/teams/${team.name}`)
+
+    // const res = await axios.delete(url_id);
+
+    // console.log(res);
+
+    // update state
+    const newTeams = teams.filter((t) => {
+      return t.name !== team.name;
+    });
+    // const newTeams = teams.filter((team) => {
+    //   return team._id !== _id;
+    // });
+
+    // setNotes(newNotes);
+    set({
+      teams: newTeams,
+    })
+  },
 
   pages: {
     teams:  ["Add Team"],
