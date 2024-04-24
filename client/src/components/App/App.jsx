@@ -13,6 +13,7 @@ import UpdateTeam from '../../pages/Form/UpdateTeam'
 import DeleteTeam from '../../pages/Form/DeleteTeam'
 import AddGame from '../../pages/Form/AddGame'
 import Admin from '../../pages/Dashboard/Dashboard'
+import About from '../../pages/About/About'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,6 +34,7 @@ function App() {
           <Route path='/delete-team' element={<DeleteTeam />} />
           <Route path='/add-game' element={<AddGame />} />
           <Route path='/admin' element={<Admin />} />
+          <Route path='/about' element={<About />} />
           <Route path='/login' element={<Admin />} />
           <Route path='*' element={<Custom404 />} />
         </Routes>
