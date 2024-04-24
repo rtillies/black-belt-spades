@@ -8,6 +8,12 @@ export default function UpdateTeam() {
   const store = spadesStore();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    // console.log('team', store.team);
+    console.log('team', store.updateTeamForm.team);
+  // });
+  }, []);
+
   const handleSubmit = async (e) => {
     console.log('team', store.team);
 
@@ -21,12 +27,6 @@ export default function UpdateTeam() {
     // Navigate to team page
     // navigate('/teams')
   };
-
-    useEffect(() => {
-      // console.log('team', store.team);
-      console.log('team', store.updateTeamForm.team);
-    // });
-    }, []);
 
   // if (store.updateTeamForm._id) return <></>;
 
