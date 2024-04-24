@@ -30,8 +30,7 @@ export default function AddTeam() {
     // });
     }, []);
 
-  // const divisions = store.divisions;
-  // console.log(store.divisions);
+  // new team should not have existing ID
   if (store.addTeamForm._id) return <></>;
 
   return (

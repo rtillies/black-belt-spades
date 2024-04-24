@@ -30,13 +30,15 @@ export default function DeleteTeam() {
     // });
   }, []);
 
-  // if (store.updateTeamForm._id) return <></>;
+    // team to delete should have existing ID
+    if (!store.team._id) return <></>;
 
   return (
     <>
       <PageHeader header="Delete Team" buttonList="add" />
       <div className="update-team form-display">
         <form onSubmit={handleSubmit}>
+        <div style={{color: "#ddd"}}>{store.team._id}</div>
           <h3>{store.team.name}</h3>
           <ul>
             <li>Conference: {store.team.conference}</li>

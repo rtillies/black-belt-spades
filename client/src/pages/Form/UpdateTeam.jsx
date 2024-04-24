@@ -10,7 +10,7 @@ export default function UpdateTeam() {
 
   useEffect(() => {
     // console.log('team', store.team);
-    console.log('team', store.updateTeamForm.team);
+    // console.log('team', store.updateTeamForm.team);
   // });
   }, []);
 
@@ -20,7 +20,7 @@ export default function UpdateTeam() {
     console.log("Submit team event", e.target);
     e.preventDefault();
     console.log("Pass prevent default");
-    store.updateTeam()
+    await store.updateTeam()
     setMessage(`Team Updated: ${store.team.name}`)
     // store.resetUpdateTeamForm()
 
@@ -30,13 +30,15 @@ export default function UpdateTeam() {
     }, 2000);
   };
 
-  // if (store.updateTeamForm._id) return <></>;
+    // team to update should have existing ID
+  if (!store.updateTeamForm._id) return <></>;
 
   return (
     <>
       <PageHeader header="Update Team" buttonList="add" />
       <div className="update-team form-display">
         <form onSubmit={handleSubmit}>
+          <div style={{color: "#ddd"}}>{store.team._id}</div>
           <div className="row">
             <div className="col">
               <div className="form-floating mb-3">
