@@ -22,10 +22,12 @@ export default function UpdateTeam() {
     console.log("Pass prevent default");
     store.updateTeam()
     setMessage(`Team Updated: ${store.team.name}`)
-    store.resetUpdateTeamForm()
+    // store.resetUpdateTeamForm()
 
     // Navigate to team page
-    // navigate('/teams')
+    setTimeout(() => {
+      navigate('/teams')
+    }, 2000);
   };
 
   // if (store.updateTeamForm._id) return <></>;

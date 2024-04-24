@@ -12,12 +12,14 @@ export default function AddTeam() {
     console.log("Submit team event", e.target);
     e.preventDefault();
     console.log("Pass prevent default");
-    store.addTeam()
+    await store.addTeam()
     // store.resetAddTeamForm()
     setMessage(`New team added: ${store.addTeamForm.name}`)
 
     // Navigate to team page
-    // navigate('/teams')
+    setTimeout(() => {
+      navigate('/teams')
+    }, 2000);
   };
 
     useEffect(() => {
