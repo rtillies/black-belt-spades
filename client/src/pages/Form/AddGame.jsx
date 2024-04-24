@@ -30,9 +30,9 @@ export default function AddGame() {
     setMessage(`New game added: Hello ID ${store.addGameForm.gameID}, ${store.addGameForm.homeTeam} vs ${store.addGameForm.awayTeam} on ${store.addGameForm.date}`)
 
     // Navigate to team page
-    // setTimeout(() => {
-    //   navigate('/games')
-    // }, 2000);
+    setTimeout(() => {
+      navigate('/games')
+    }, 2000);
   };
 
     useEffect(() => {
