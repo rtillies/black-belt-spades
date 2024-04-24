@@ -18,6 +18,10 @@ export default function HeaderButton({text, color}) {
         navigate('/add-team')
         break;
       case 'Update Team':
+        store.teamToUpdate()
+        console.log('ready to show update form')
+        console.log('store team', store.team);
+        console.log('form team', store.updateTeamForm);
         navigate('/update-team')
         break;
       case 'Add Game':

@@ -115,7 +115,7 @@ const spadesStore = create((set) => ({
  * ------------------- */
 
   updateTeamForm: {
-    _id: "",
+    _id: null,
     name: "",
     location: "",
     division: "",
@@ -125,6 +125,31 @@ const spadesStore = create((set) => ({
     email: "",
     phone: "",
   },
+
+  teamToUpdate: () => {
+    // get current note values
+    const { team } = spadesStore.getState();
+    console.log('set update team', team);
+    console.log('update team?', team);
+    // set state
+
+    set({
+      updateTeamForm: team,
+      // updateTeamForm: {
+      //   _id: team._id,
+      //   name: team.name,
+      //   location: team.location,
+      //   division: team.division,
+      //   conference: team.conference,
+      //   captain: team.captain,
+      //   partner: team.partner,
+      //   email: team.email,
+      //   phone: team.phone,
+      // },
+    })
+    // setUpdateForm({ title: note.title, body: note.body, _id: note._id });
+  },
+
 
   updateUpdateTeamFormField: (e) => {
     const { name, value } = e.target;
@@ -141,18 +166,20 @@ const spadesStore = create((set) => ({
   },
 
   resetUpdateTeamForm: (e) => {
+    const { updateTeamForm, team } = spadesStore.getState();
     console.log('Reset form');
+    console.log('update team', team);
 
     set({
       updateTeamForm: {
-        name: "",
-        location: "",
-        division: "",
-        conference: "",
-        captain: "",
-        partner: "",
-        email: "",
-        phone: "",
+        name: team.name,
+        location: team.location,
+        division: team.division,
+        conference: team.conference,
+        captain: team.captain,
+        partner: team.partner,
+        email: team.email,
+        phone: team.phone,
       },
     });
   },
@@ -160,11 +187,12 @@ const spadesStore = create((set) => ({
   updateTeam: async (e) => {
     // e.preventDefault();
 
-    const { updateTeamForm, teams } = spadesStore.getState();
+    const { updateTeamForm, teams, team } = spadesStore.getState();
 
     // send update request
     console.log(updateTeamForm);
-    const res = await axios.put("/teams", {
+    // const res = await axios.patch("/teams", {
+    const res = await axios.patch(`/teams/${team.name}`, {
       name: updateTeamForm.name,
       location: updateTeamForm.location,
       division: updateTeamForm.division,
@@ -187,18 +215,25 @@ const spadesStore = create((set) => ({
     set({
       teams: newTeams,
       updateTeamForm: {
-        name: "",
-        location: "",
-        division: "",
-        conference: "",
-        captain: "",
-        partner: "",
-        email: "",
-        phone: "",
-      },
+        // name: "",
+        // location: "",
+        // division: "",
+        // conference: "",
+        // captain: "",
+        // partner: "",
+        // email: "",
+        // phone: "",
+        name: team.name,
+        location: team.location,
+        division: team.division,
+        conference: team.conference,
+        captain: team.captain,
+        partner: team.partner,
+        email: team.email,
+        phone: team.phone,
+        },
     });
   },
-
 
 
   pages: {

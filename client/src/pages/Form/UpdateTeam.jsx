@@ -23,18 +23,12 @@ export default function UpdateTeam() {
   };
 
     useEffect(() => {
-    // store.getData('divisions');
-    // console.log('Get divisions');
-    // store.getData('conferences');
-      // message.current = "Submitted"
-      console.log('team', store.team);
-
+      // console.log('team', store.team);
+      console.log('team', store.updateTeamForm.team);
     // });
     }, []);
 
-  // const divisions = store.divisions;
-  // console.log(store.divisions);
-  if (store.updateTeamForm._id) return <></>;
+  // if (store.updateTeamForm._id) return <></>;
 
   return (
     <>
@@ -98,7 +92,7 @@ export default function UpdateTeam() {
                   name="location"
                   id="location"
                   placeholder=""
-                  value={store.team.location}
+                  value={store.updateTeamForm.location}
                   onChange={store.updateUpdateTeamFormField}
                 />
                 <label htmlFor="location">Location</label>
@@ -115,7 +109,7 @@ export default function UpdateTeam() {
                   name="captain"
                   id="captain"
                   placeholder=""
-                  value={store.team.captain}
+                  value={store.updateTeamForm.captain}
                   onChange={store.updateUpdateTeamFormField}
                 />
                 <label htmlFor="captain">Captain (Player 1)</label>
@@ -130,7 +124,7 @@ export default function UpdateTeam() {
                   name="partner"
                   id="partner"
                   placeholder=""
-                  value={store.team.partner}
+                  value={store.updateTeamForm.partner}
                   onChange={store.updateUpdateTeamFormField}
                 />
                 <label htmlFor="partner">Partner (Player 2)</label>
@@ -147,7 +141,7 @@ export default function UpdateTeam() {
                   name="email"
                   id="email"
                   placeholder=""
-                  value={store.team.email}
+                  value={store.updateTeamForm.email}
                   onChange={store.updateUpdateTeamFormField}
                 />
                 <label htmlFor="email">Captain Email Address</label>
@@ -162,7 +156,7 @@ export default function UpdateTeam() {
                   name="phone"
                   id="phone"
                   placeholder=""
-                  value={store.team.phone}
+                  value={store.updateTeamForm.phone}
                   onChange={store.updateUpdateTeamFormField}
                 />
                 <label htmlFor="phone">Captain Phone Number</label>
