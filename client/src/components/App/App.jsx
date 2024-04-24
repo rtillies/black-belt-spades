@@ -11,6 +11,7 @@ import SingleTeam from '../../pages/DataPage/SingleTeam'
 import AddTeam from '../../pages/Form/AddTeam'
 import UpdateTeam from '../../pages/Form/UpdateTeam'
 import DeleteTeam from '../../pages/Form/DeleteTeam'
+import AddGame from '../../pages/Form/AddGame'
 import Admin from '../../pages/Dashboard/Dashboard'
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='/add-team' element={<AddTeam />} />
           <Route path='/update-team' element={<UpdateTeam />} />
           <Route path='/delete-team' element={<DeleteTeam />} />
+          <Route path='/add-game' element={<AddGame />} />
           <Route path='/admin' element={<Admin />} />
           <Route path='/login' element={<Admin />} />
           <Route path='*' element={<Custom404 />} />
