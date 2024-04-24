@@ -53,7 +53,7 @@ export default function DeleteTeam() {
           </button>
         </form>
         <h4 id="message" className="m-2">
-          {message} Message
+          {message}
         </h4>
       </div>
     </>
